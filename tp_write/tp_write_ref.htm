@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+</head>
+<body>
+    <h1 id="tp-write-command-reference">TP WRITE Command Reference</h1>
+<p>Use TP_WRITE to switch/change the iPendant windows/screens .</p>
+<ul>
+<li>switch Single / Triple / Dual -Screens</li>
+<li>show Single_UserSreen / Single_UserScreen_Wide</li>
+<li>load a user-defined screen</li>
+<li>show modal dialogs</li>
+</ul>
+<p>The shrinked version(<em>tp_write_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
+<ul>
+<li><code>Teach Pendant  : TP_WRITE('HELP'); </code></li>
+<li><code>web browser    : _hostname_/karel/tp_write</code></li>
+<li><code>FTP upload     : tp_write_ref.htm --&gt; FR:tp_write_ref.htm  </code></li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p><em>TP_WRITE</em> uses command strings to execute given task.</p>
+<p>These strings are based on a internal variable(cmd_list) with unique command ID.</p>
+<p>The ID can also be used as a substitute for the string commands. (use ID in brackets after command name)</p>
+<p>Some commands require several parameters or arguments.</p>
+<p>[Optional arguments in square brackets.]</p>
+<p><em>Info: check <strong>tp_write-va</strong> file to check cmd-states and internal cmd_list.</em></p>
+<hr>
+<h3 id="help-11">HELP (11)</h3>
+<p><code>:TP_WRITE('HELP'); </code> <strong>or</strong>
+<code>:TP_WRITE(11); </code></p>
+<p><strong>Shows (web)help of this program</strong></p>
+<hr>
+<h3 id="user-21">USER (21)</h3>
+<p><code>:TP_WRITE('USER','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to UserScreen</strong></p>
+<hr>
+<h3 id="tpdisplay-21">TPDISPLAY (21)</h3>
+<p><code>:TP_WRITE('TPDISPLAY','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to UserScreen</strong></p>
+<hr>
+<h3 id="tperror-22">TPERROR (22)</h3>
+<p><code>:TP_WRITE('TPERROR','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to TPERROR area</strong></p>
+<hr>
+<h3 id="tpprompt-23">TPPROMPT (23)</h3>
+<p><code>:TP_WRITE('TPPROMPT','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to TPPROMPT area</strong></p>
+<hr>
+<h3 id="tpfunc-24">TPFUNC (24)</h3>
+<p><code>:TP_WRITE('TPFUNC','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to TPFUNC (function keys area)</strong></p>
+<hr>
+<h3 id="tpstatus-25">TPSTATUS (25)</h3>
+<p><code>:TP_WRITE('TPSTATUS','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to TPSTATUS (only if active)</strong></p>
+<hr>
+<h3 id="sr-26">SR (26)</h3>
+<p><code>:TP_WRITE('SR',idx,'Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to SR with given String and index</strong></p>
+<hr>
+<h3 id="console-27">CONSOLE (27)</h3>
+<p><code>:TP_WRITE('CONSOLE','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to CONSOLE</strong></p>
+<hr>
+<h3 id="post_err-28">POST_ERR (28)</h3>
+<p><code>:TP_WRITE('POST_ERR',ERRCODE,SEV); </code></p>
+<p><strong>Posts an error with given err-id and severity</strong></p>
+<hr>
+<h3 id="apsh_err-29">APSH_ERR (29)</h3>
+<p><code>:TP_WRITE('APSH_ERR','Hello User',SEV); </code></p>
+<p><strong>Posts an APSH_ERR with given String ans severity</strong></p>
+<hr>
+<h3 id="clear-commands">CLEAR commands</h3>
+<p><code>:TP_WRITE('CLEAR.xxxx'); </code></p>
+<p><strong>Erases all chars from corresponding sreen/area</strong></p>
+<hr>
+<h3 id="cleartpdisplay-61">CLEAR.TPDISPLAY (61)</h3>
+<p><code>:TP_WRITE('CLEAR.TPDISPLAY'); </code></p>
+<p><strong>erases all chars from TPDISPLAY/User screen</strong></p>
+<hr>
+<h3 id="cleartperror-62">CLEAR.TPERROR (62)</h3>
+<p><code>:TP_WRITE('CLEAR.TPERROR'); </code></p>
+<p><strong>erases all chars from error area</strong></p>
+<hr>
+<h3 id="cleartpprompt-63">CLEAR.TPPROMPT (63)</h3>
+<p><code>:TP_WRITE('CLEAR.TPPROMPT'); </code></p>
+<p><strong>erases all chars from prompt area</strong></p>
+<hr>
+<h3 id="cleartpfunc-64">CLEAR.TPFUNC (64)</h3>
+<p><code>:TP_WRITE('CLEAR.TPFUNC'); </code></p>
+<p><strong>erases all chars from function key area</strong></p>
+<hr>
+<h3 id="cleartpstatus-65">CLEAR.TPSTATUS (65)</h3>
+<p><code>:TP_WRITE('CLEAR.TPSTATUS'); </code></p>
+<p><strong>erases all chars from status area ; only if status is active</strong></p>
+<hr>
+<h3 id="clearuser-61">CLEAR.USER (61)</h3>
+<p><code>:TP_WRITE('CLEAR.USER'); </code></p>
+<p><strong>erases all chars from TPDISPLAY/User screen</strong></p>
+<hr>
+<h2 id="force-commands">FORCE Commands</h2>
+<p><em>FORCE.LINK</em> is the raw interface to <em>FORCE_LINK karel builtin</em></p>
+<ul>
+<li>Others are 'based' on FORCE_LINK.</li>
+</ul>
+<hr>
+<h3 id="forceuser-51">FORCE.USER (51)</h3>
+<p><code>:TP_WRITE('FORCE.USER'); </code></p>
+<p><strong>Forces SingleUserScreen</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+</ul>
+<hr>
+<h3 id="forceuserwide-52">FORCE.USERWIDE (52)</h3>
+<p><code>:TP_WRITE('FORCE.USERWIDE'); </code></p>
+<p><strong>Forces SingleUserScreen inside wide mode</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+</ul>
+<hr>
+<hr>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND</p>
+<hr>
+<ul>
+<li>Fanuc is a registered trademark</li>
+</ul>
+<hr>
+<p>(c) Backdate Software GmbH</p>
+
+</body>
+</html>

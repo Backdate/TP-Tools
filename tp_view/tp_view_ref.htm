@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+</head>
+<body>
+    <h1 id="tp-view-command-reference">TP VIEW Command Reference</h1>
+<p>Use TP_VIEW to switch/change the iPendant windows/screens .</p>
+<ul>
+<li>switch Single / Triple / Dual -Screens</li>
+<li>show Single_UserSreen / Single_UserScreen_Wide</li>
+<li>load a user-defined screen</li>
+<li>show modal dialogs</li>
+</ul>
+<p>The shrinked version(<em>tp_view_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
+<ul>
+<li><code>Teach Pendant  : TP_VIEW('HELP'); </code></li>
+<li><code>web browser    : _hostname_/karel/tp_view</code></li>
+<li><code>FTP upload     : tpview_ref.htm --&gt; FR:tpview_ref.htm  </code></li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p><em>TP_VIEW</em> uses command strings to execute given task.</p>
+<p>These strings are based on a internal variable(cmd_list) with unique command ID.</p>
+<p>The ID can also be used as a substitute for the string commands. (use ID in brackets after command name)</p>
+<p>Some commands require several parameters or arguments.</p>
+<p>[Optional arguments in square brackets.]</p>
+<p><em>Info: check <strong>tp_view-va</strong> file to check cmd-states and internal cmd_list.</em></p>
+<hr>
+<h3 id="help-11">HELP (11)</h3>
+<p><code>:TP_VIEW('HELP'); </code> <strong>or</strong>
+<code>:TP_VIEW(11); </code></p>
+<p><strong>Shows (web)help of this program</strong></p>
+<hr>
+<h3 id="restore-12">RESTORE (12)</h3>
+<p><code>:TP_VIEW('RESTORE'); </code></p>
+<p><strong>Restores &quot;$UI_RESTORE[1]-sysvar&quot;</strong></p>
+<p><strong>not recommended!</strong></p>
+<hr>
+<h3 id="load_view-13">LOAD_VIEW (13)</h3>
+<p><code>:TP_VIEW('LOAD_VIEW',[idx]); </code></p>
+<p><strong>Forces the user (favorite) view by given index</strong></p>
+<pre><code>Default : 1
+</code></pre>
+<ul>
+<li>equal command: <strong>FORCE.VIEW</strong></li>
+<li>To clear a <em>user view</em> use <strong>CLEAR_VIEW-command</strong></li>
+</ul>
+<h4 id="to-add-a-new--user-favorite-view-use">To add a new  <em>user favorite view</em> use:</h4>
+<p><strong>TP-MENU</strong></p>
+<ul>
+<li><strong>[SHIFT]+[DISP]</strong>
+<ul>
+<li>User View
+<ul>
+<li>Add Current</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="clear_view-14">CLEAR_VIEW (14)</h3>
+<p><code>:TP_VIEW('CLEAR_VIEW',[idx]); </code></p>
+<p><strong>Clears the user view with given index</strong></p>
+<pre><code>Default : 1
+</code></pre>
+<hr>
+<h3 id="single_user-15">SINGLE_USER (15)</h3>
+<p><code>:TP_VIEW('SINGLE_USER'); </code></p>
+<p><strong>Forces SingleUserScreen</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+<li>equal command: <strong>FORCE.USER</strong></li>
+</ul>
+<hr>
+<h3 id="wide_user-16">WIDE_USER (16)</h3>
+<p><code>:TP_VIEW('WIDE_USER'); </code></p>
+<p><strong>Forces SingleUserScreen inside wide mode</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+<li>equal command: <strong>FORCE.USERWIDE</strong></li>
+</ul>
+<hr>
+<h2 id="screen-commands">SCREEN Commands</h2>
+<p><strong>Screen commands shows default screen/window combination</strong></p>
+<hr>
+<h3 id="screensingle-21">SCREEN.SINGLE (21)</h3>
+<p><code>:TP_VIEW('SCREEN.SINGLE'); </code></p>
+<p><strong>default window inside SingleScreen</strong></p>
+<hr>
+<h3 id="screenwide-22">SCREEN.WIDE (22)</h3>
+<p><code>:TP_VIEW('SCREEN.WIDE'); </code></p>
+<p><strong>default window inside SingleScreen WIDE</strong></p>
+<hr>
+<h3 id="screendouble-23">SCREEN.DOUBLE (23)</h3>
+<p><code>:TP_VIEW('SCREEN.DOUBLE'); </code></p>
+<p><strong>default window(s) inside DOUBLEScreen</strong></p>
+<hr>
+<h3 id="screentriple-24">SCREEN.TRIPLE (24)</h3>
+<p><code>:TP_VIEW('SCREEN.TRIPLE'); </code></p>
+<p><strong>default window(s) inside TRIPLEScreen</strong></p>
+<hr>
+<h3 id="screentreeprim-25">SCREEN.TREEPRIM (25)</h3>
+<p><code>:TP_VIEW('SCREEN.TREEPRIM'); </code></p>
+<p><strong>default window(s) inside TreeView and PrimaryScreen</strong></p>
+<hr>
+<h3 id="screenstatprim-26">SCREEN.STATPRIM (26)</h3>
+<p><code>:TP_VIEW('SCREEN.STATPRIM'); </code></p>
+<p><strong>default window(s) inside StatusScreen and PrimaryScreen</strong></p>
+<hr>
+<h2 id="dialog-commands">DIALOG Commands</h2>
+<p><strong>Shows modal dialogs</strong></p>
+<ul>
+<li>Used to interact with user.</li>
+<li>Program is blocked until a button at the dialog or [PREV]-key is pressed.</li>
+<li><del>(Optional) Flags or Registers will be set to False/Zero at start.</del></li>
+</ul>
+<p>Check Fanuc iPendant customization doc for XML definition.</p>
+<hr>
+<h3 id="dialogfromfile-41">DIALOG.FROMFILE (41)</h3>
+<p><code>:TP_VIEW('DIALOG.FROMFILE','FR:mydialog.xml'); </code></p>
+<p><strong>EXPERIMENTAL</strong></p>
+<p>Shows a modal dialog. The XML dialog is loaded from file path.</p>
+<p>User/Developer has to setup the XML file and FLAGs or VARs for dialog result.
+This command will handle <del>only the [PREV]-key</del> currently no key.</p>
+<hr>
+<h2 id="force-commands">FORCE Commands</h2>
+<p><em>FORCE.LINK</em> is the raw interface to <em>FORCE_LINK karel builtin</em></p>
+<ul>
+<li>Others are 'based' on FORCE_LINK.</li>
+</ul>
+<hr>
+<h3 id="forceuser-51">FORCE.USER (51)</h3>
+<p><code>:TP_VIEW('FORCE.USER'); </code></p>
+<p><strong>Forces SingleUserScreen</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+</ul>
+<hr>
+<h3 id="forceuserwide-52">FORCE.USERWIDE (52)</h3>
+<p><code>:TP_VIEW('FORCE.USERWIDE'); </code></p>
+<p><strong>Forces SingleUserScreen inside wide mode</strong></p>
+<ul>
+<li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
+<li><strong>Additionally</strong> the USER Screen/Menu will be shown.</li>
+</ul>
+<hr>
+<h3 id="forceview-53">FORCE.VIEW (53)</h3>
+<p><code>:TP_VIEW('FORCE.VIEW',[idx]); </code></p>
+<p><strong>Forces the user view by given index</strong></p>
+<p>To add a new  <em>user favorite view</em> use
+<strong>TP-MENU</strong></p>
+<ul>
+<li><strong>[SHIFT]+[DISP]</strong>
+<ul>
+<li>User View
+<ul>
+<li>Add Current</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To clear a <em>user favorite view</em> use <strong>CLEAR_VIEW-command</strong></p>
+<hr>
+<h3 id="forcelink-59">FORCE.LINK (59)</h3>
+<p><code>:TP_VIEW('FORCE.LINK','URL',[string2]..); </code></p>
+<p><strong>Forces a valid link by a string (array)</strong></p>
+<ul>
+<li>one or more string arguments are concated to together</li>
+<li>check fanuc documentation! This is advanced stuff!</li>
+<li>use with caution!</li>
+</ul>
+<hr>
+<hr>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND</p>
+<hr>
+<ul>
+<li>Fanuc is a registered trademark</li>
+</ul>
+<hr>
+<p>(c) Backdate Software GmbH</p>
+
+</body>
+</html>
