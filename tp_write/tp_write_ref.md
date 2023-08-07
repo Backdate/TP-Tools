@@ -11,7 +11,7 @@ The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded 
 
 - ```Teach Pendant  : TP_WRITE('HELP'); ```
 - ```web browser    : _hostname_/karel/tp_write```
-- ```FTP upload     : tp_write_ref.htm --> FR:tp_write_ref.htm  ```
+- ```FTP upload     : tp_write_ref.htm --> FR: CALL TP_WRITE_ref.htm  ```
 
 ## Commands
 
@@ -28,112 +28,122 @@ Some commands require several parameters or arguments.
 *Info: check **tp_write-va** file to check cmd-states and internal cmd_list.*
 
 ---
+### PARSE
+every (dynamic) string will be parsed if there is an extra/additional argument.
+
+String 'Parser' searches for some special "CHARS"	
+  - Register  = '%R'
+	- StringRegister  = '%SR'
+
+```:CALL TP_WRITE('USER','Value of R[1]is %R',1);```
+
+---
 ### HELP (11)
-```:TP_WRITE('HELP'); ``` **or**
-```:TP_WRITE(11); ```
+```: CALL TP_WRITE('HELP'); ``` **or**
+```: CALL TP_WRITE(11); ```
 
 **Shows (web)help of this program**
 
 ---
 ### USER (21)
-```:TP_WRITE('USER','Hello User'); ```
+```: CALL TP_WRITE('USER','Hello User'); ```
 
 **Writes a (dynamic)string to UserScreen**
 
 ---
 ### TPDISPLAY (21)
-```:TP_WRITE('TPDISPLAY','Hello User'); ```
+```: CALL TP_WRITE('TPDISPLAY','Hello User'); ```
 
 **Writes a (dynamic)string to UserScreen**
 
 ---
 ### TPERROR (22)
-```:TP_WRITE('TPERROR','Hello User'); ```
+```: CALL TP_WRITE('TPERROR','Hello User'); ```
 
 **Writes a (dynamic)string to TPERROR area**
 
 ---
 ### TPPROMPT (23)
-```:TP_WRITE('TPPROMPT','Hello User'); ```
+```: CALL TP_WRITE('TPPROMPT','Hello User'); ```
 
 **Writes a (dynamic)string to TPPROMPT area**
 
 
 ---
 ### TPFUNC (24)
-```:TP_WRITE('TPFUNC','Hello User'); ```
+```: CALL TP_WRITE('TPFUNC','Hello User'); ```
 
 **Writes a (dynamic)string to TPFUNC (function keys area)**
 
 ---
 ### TPSTATUS (25)
-```:TP_WRITE('TPSTATUS','Hello User'); ```
+```: CALL TP_WRITE('TPSTATUS','Hello User'); ```
 
 **Writes a (dynamic)string to TPSTATUS (only if active)**
 
 ---
 ### SR (26)
-```:TP_WRITE('SR',idx,'Hello User'); ```
+```: CALL TP_WRITE('SR',idx,'Hello User'); ```
 
 **Writes a (dynamic)string to SR with given String and index**
 
 ---
 ### CONSOLE (27)
-```:TP_WRITE('CONSOLE','Hello User'); ```
+```: CALL TP_WRITE('CONSOLE','Hello User'); ```
 
 **Writes a (dynamic)string to CONSOLE**
 
 ---
 ### POST_ERR (28)
-```:TP_WRITE('POST_ERR',ERRCODE,SEV); ```
+```: CALL TP_WRITE('POST_ERR',ERRCODE,SEV); ```
 
 **Posts an error with given err-id and severity**
 
 ---
 ### APSH_ERR (29)
-```:TP_WRITE('APSH_ERR','Hello User',SEV); ```
+```: CALL TP_WRITE('APSH_ERR','Hello User',SEV); ```
 
 **Posts an APSH_ERR with given String ans severity**
 
 ---
 ### CLEAR commands
-```:TP_WRITE('CLEAR.xxxx'); ```
+```: CALL TP_WRITE('CLEAR.xxxx'); ```
 
 **Erases all chars from corresponding sreen/area**
 
 ---
 ### CLEAR.TPDISPLAY (61)
-```:TP_WRITE('CLEAR.TPDISPLAY'); ```
+```: CALL TP_WRITE('CLEAR.TPDISPLAY'); ```
 
 **erases all chars from TPDISPLAY/User screen**
 
 ---
 ### CLEAR.TPERROR (62)
-```:TP_WRITE('CLEAR.TPERROR'); ```
+```: CALL TP_WRITE('CLEAR.TPERROR'); ```
 
 **erases all chars from error area**
 
 ---
 ### CLEAR.TPPROMPT (63)
-```:TP_WRITE('CLEAR.TPPROMPT'); ```
+```: CALL TP_WRITE('CLEAR.TPPROMPT'); ```
 
 **erases all chars from prompt area**
 
 ---
 ### CLEAR.TPFUNC (64)
-```:TP_WRITE('CLEAR.TPFUNC'); ```
+```: CALL TP_WRITE('CLEAR.TPFUNC'); ```
 
 **erases all chars from function key area**
 
 ---
 ### CLEAR.TPSTATUS (65)
-```:TP_WRITE('CLEAR.TPSTATUS'); ```
+```: CALL TP_WRITE('CLEAR.TPSTATUS'); ```
 
 **erases all chars from status area ; only if status is active**
 
 ---
 ### CLEAR.USER (61)
-```:TP_WRITE('CLEAR.USER'); ```
+```: CALL TP_WRITE('CLEAR.USER'); ```
 
 **erases all chars from TPDISPLAY/User screen**
 
@@ -147,7 +157,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### FORCE.USER (51)
-```:TP_WRITE('FORCE.USER'); ```
+```: CALL TP_WRITE('FORCE.USER'); ```
 
 **Forces SingleUserScreen** 
 
@@ -156,7 +166,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### FORCE.USERWIDE (52)
-```:TP_WRITE('FORCE.USERWIDE'); ```
+```: CALL TP_WRITE('FORCE.USERWIDE'); ```
 
 **Forces SingleUserScreen inside wide mode**
 
