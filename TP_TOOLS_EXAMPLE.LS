@@ -24,5 +24,9 @@ LOCAL_REGISTERS	= 0,0,0;
 :CALL TP_VIEW('FORCE.USER');
 :CALL TP_WRITE('USER','Value of R[1]is %R',1);
 :CALL TP_WRITE('USER','Value of SR[1]is %SR',1);
+:PAUSE;
+:CALL TP_VIEW('FORCE.USERWIDE');
+:CALL TP_WRITE('USER','Value of R[1]is %R',1);
+:CALL TP_WRITE('USER','Value of SR[1]is %SR',1);
 /POS
 /END

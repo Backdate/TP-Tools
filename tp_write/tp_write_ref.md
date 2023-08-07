@@ -31,7 +31,7 @@ Some commands require several parameters or arguments.
 ### PARSE
 every (dynamic) string will be parsed if there is an extra/additional argument.
 
-String 'Parser' searches for some special "CHARS"	
+'String parser' searches for some special "CHARS"	
   - Register  = '%R'
 	- StringRegister  = '%SR'
 
@@ -151,9 +151,9 @@ String 'Parser' searches for some special "CHARS"
 
 ---
 ## FORCE Commands
-*FORCE.LINK* is the raw interface to *FORCE_LINK karel builtin*
-
-- Others are 'based' on FORCE_LINK.
+Same as **'TP_VIEW'** 'force commands. 
+ - same string-commands
+ - same command ID's
 
 ---
 ### FORCE.USER (51)
