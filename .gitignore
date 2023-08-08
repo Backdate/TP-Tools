@@ -1,2 +1,4 @@
 *.bat
 *.py
+*.url
+*.tp
