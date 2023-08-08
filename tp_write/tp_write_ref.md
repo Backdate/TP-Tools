@@ -2,12 +2,14 @@
 
 TP_WRITE can be used to write single-line (dynamic) messages to various "screens".
 
-
 Among others, the following are available for selection:
 
 - Console
 - UserScreen
 - TPError
+- StringRegister
+
+*In most cases the string length is truncated by *System* at length of 40.*
 
 
 The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.
@@ -31,8 +33,8 @@ Some commands require several parameters or arguments.
 *Info: check **tp_write-va** file to check cmd-states and internal cmd_list.*
 
 ---
-### PARSE
-every (dynamic) string will be parsed **only** if there is an extra/additional argument.
+## PARSE
+ All (dynamic) strings will be parsed **only** if there is an extra/additional argument!
 
 'String parser' searches for some special "CHARS":	
   - Register Value string  = '%R'
