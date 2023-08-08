@@ -11,12 +11,12 @@
 </head>
 <body>
     <h1 id="tp-write-command-reference">TP WRITE Command Reference</h1>
-<p>Use TP_WRITE to switch/change the iPendant windows/screens .</p>
+<p>TP_WRITE can be used to write single-line (dynamic) messages to various &quot;screens&quot;.</p>
+<p>Among others, the following are available for selection:</p>
 <ul>
-<li>switch Single / Triple / Dual -Screens</li>
-<li>show Single_UserSreen / Single_UserScreen_Wide</li>
-<li>load a user-defined screen</li>
-<li>show modal dialogs</li>
+<li>Console</li>
+<li>UserScreen</li>
+<li>TPError</li>
 </ul>
 <p>The shrinked version(<em>tp_write_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
 <ul>
@@ -33,16 +33,26 @@
 <p><em>Info: check <strong>tp_write-va</strong> file to check cmd-states and internal cmd_list.</em></p>
 <hr>
 <h3 id="parse">PARSE</h3>
-<p>every (dynamic) string will be parsed if there is an extra/additional argument.</p>
-<p>'String parser' searches for some special &quot;CHARS&quot;</p>
+<p>every (dynamic) string will be parsed <strong>only</strong> if there is an extra/additional argument.</p>
+<p>'String parser' searches for some special &quot;CHARS&quot;:</p>
 <ul>
-<li>Register  = '%R'
+<li>Register Value string  = '%R'
 <ul>
-<li>StringRegister  = '%SR'</li>
+<li>StringRegister Value string   = '%SR'</li>
+</ul>
+</li>
+<li>Time  string  = '%TIME'
+<ul>
+<li>needs also an extra argument: '0'
+<ul>
+<li>otherwise parser is not executed</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p><code>:CALL TP_WRITE('USER','Value of R[1]is %R',1);</code></p>
+<p><code>:CALL TP_WRITE('USER','Time now: %TIME',1);</code></p>
 <hr>
 <h3 id="help-11">HELP (11)</h3>
 <p><code>: CALL TP_WRITE('HELP'); </code> <strong>or</strong>

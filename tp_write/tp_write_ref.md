@@ -1,11 +1,14 @@
 # TP WRITE Command Reference
 
-Use TP_WRITE to switch/change the iPendant windows/screens .
+TP_WRITE can be used to write single-line (dynamic) messages to various "screens".
 
-- switch Single / Triple / Dual -Screens
-- show Single_UserSreen / Single_UserScreen_Wide
-- load a user-defined screen
-- show modal dialogs
+
+Among others, the following are available for selection:
+
+- Console
+- UserScreen
+- TPError
+
 
 The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.
 
@@ -29,13 +32,18 @@ Some commands require several parameters or arguments.
 
 ---
 ### PARSE
-every (dynamic) string will be parsed if there is an extra/additional argument.
+every (dynamic) string will be parsed **only** if there is an extra/additional argument.
 
-'String parser' searches for some special "CHARS"	
-  - Register  = '%R'
-	- StringRegister  = '%SR'
+'String parser' searches for some special "CHARS":	
+  - Register Value string  = '%R'
+	- StringRegister Value string   = '%SR'
+  - Time  string  = '%TIME' 
+    - needs also an extra argument: '0'
+      - otherwise parser is not executed
 
 ```:CALL TP_WRITE('USER','Value of R[1]is %R',1);```
+
+```:CALL TP_WRITE('USER','Time now: %TIME',1);```
 
 ---
 ### HELP (11)
