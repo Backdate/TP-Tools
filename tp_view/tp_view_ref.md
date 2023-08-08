@@ -147,6 +147,8 @@ Check Fanuc iPendant customization doc for XML definition.
 
 Shows a modal dialog. The XML dialog is loaded from file path.
 
+**Read Fanuc iPendant customization of xml file description**
+
 User/Developer has to setup the XML file and FLAGs or VARs for dialog result.
 This command will handle only the [PREV]-key.
 
@@ -159,6 +161,7 @@ XML-File uses Flag[1] - Flag[8]
 - Flag[1] is used to detect if **[OK]** is pressed.
 - Flag[3] -Flag[8] are toggled by button. 
 - [OK]-button-dlgtile has special Type (type="1") to escape from dialog 
+
 
 ---
 ## FORCE Commands
