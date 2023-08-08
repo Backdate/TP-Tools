@@ -1,0 +1,108 @@
+<DIALOG posx="120" posy="90" width="390" height="280" bgcolor="#C0C0C0">
+<TEXT  font="24"> Dialog Flags</TEXT> 
+
+
+
+<DLGTILE posx="365" posy="5" width="20" height="20" type="1">
+  <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" 
+  id="close">
+  <param name="Caption" value="X">
+  </object>
+</DLGTILE>
+
+
+<DLGTILE posx="10" posy="30" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 3">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="3">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+      <param name="ReadOnly" value="0">
+      <param name="Border" value="1">
+       <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+<DLGTILE posx="135" posy="30" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 4">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="4">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+       <param name="ReadOnly" value="0">
+       <param name="Border" value="1">
+        <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+
+<DLGTILE posx="260" posy="30" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 5">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="5">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+      <param name="ReadOnly" value="0">
+      <param name="Border" value="1">
+       <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+<DLGTILE posx="10" posy="120" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 6">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="6">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+       <param name="ReadOnly" value="0">
+       <param name="Border" value="1">
+      <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+
+<DLGTILE posx="135" posy="120" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 7">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="7">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+      <param name="ReadOnly" value="0">
+      <param name="Border" value="1">
+      <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+<DLGTILE posx="260" posy="120" width="120" height="50" type="0">
+    <object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+      <param name="Caption" value="Flag 8">
+      <param name="DataType" value="35">
+      <param name="DataIndex" value="8">
+      <param name="Invert" value="0">
+      <param name="TrueColor" value="65280">
+      <param name="FalseColor" value="255">
+       <param name="ReadOnly" value="0">
+       <param name="Border" value="1">
+      <param name="ForeColor" value="0">
+    </object>
+</DLGTILE>
+
+<!-- Yes -->
+<DLGTILE posx="135" posy="200" width="120" height="50" type="1">
+<object classid="clsid:7106066C-0E45-11D3-81B6-0000E206D650" id="">
+  <param name="Caption" value="OK">
+  <param name="DataType" value="35">
+  <param name="DataIndex" value="1">
+  <param name="FontSize" value="18">
+  <param name="Border" value="2">
+  <param name="ForeColor" value="0">
+</object>
+</DLGTILE>
+
+
+</DIALOG>

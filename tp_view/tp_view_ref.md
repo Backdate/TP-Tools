@@ -142,15 +142,23 @@ Check Fanuc iPendant customization doc for XML definition.
 
 ---
 ### DIALOG.FROMFILE (41)
-```:TP_VIEW('DIALOG.FROMFILE','FR:mydialog.xml'); ```
+```:TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml'); ```
 
-**EXPERIMENTAL**
 
 Shows a modal dialog. The XML dialog is loaded from file path.
 
 User/Developer has to setup the XML file and FLAGs or VARs for dialog result.
-This command will handle ~~only the [PREV]-key~~ currently no key.
+This command will handle only the [PREV]-key.
 
+Example files:
+ - **dlg_Flags_OK.xml**
+ - **TP_VIEW_DIALOG.LS**
+
+XML-File uses Flag[1] - Flag[8]
+
+- Flag[1] is used to detect if **[OK]** is pressed.
+- Flag[3] -Flag[8] are toggled by button. 
+- [OK]-button-dlgtile has special Type (type="1") to escape from dialog 
 
 ---
 ## FORCE Commands

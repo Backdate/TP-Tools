@@ -532,11 +532,21 @@ xref {
 <p>Check Fanuc iPendant customization doc for XML definition.</p>
 <hr>
 <h3 id="dialogfromfile-41">DIALOG.FROMFILE (41)</h3>
-<p><code>:TP_VIEW('DIALOG.FROMFILE','FR:mydialog.xml'); </code></p>
-<p><strong>EXPERIMENTAL</strong></p>
+<p><code>:TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml'); </code></p>
 <p>Shows a modal dialog. The XML dialog is loaded from file path.</p>
 <p>User/Developer has to setup the XML file and FLAGs or VARs for dialog result.
-This command will handle <del>only the [PREV]-key</del> currently no key.</p>
+This command will handle only the [PREV]-key.</p>
+<p>Example files:</p>
+<ul>
+<li><strong>dlg_Flags_OK.xml</strong></li>
+<li><strong>TP_VIEW_DIALOG.LS</strong></li>
+</ul>
+<p>XML-File uses Flag[1] - Flag[8]</p>
+<ul>
+<li>Flag[1] is used to detect if <strong>[OK]</strong> is pressed.</li>
+<li>Flag[3] -Flag[8] are toggled by button.</li>
+<li>[OK]-button-dlgtile has special Type (type=&quot;1&quot;) to escape from dialog</li>
+</ul>
 <hr>
 <h2 id="force-commands">FORCE Commands</h2>
 <p><em>FORCE.LINK</em> is the raw interface to <em>FORCE_LINK karel builtin</em></p>
