@@ -64,6 +64,8 @@ You can switch between
 - Show modal Dialogs
 
 
+[tp_view](/tp_view/readme.md)
+
 ![tp_view](./assets/TP_VIEW_Example1.gif)
 
 
@@ -79,6 +81,7 @@ e.g.
 
 TP_WRITE can be used to write single-line (dynamic) messages to various "screens".
 
+[tp_write](/tp_write/readme.md)
 
 ![tp](./assets/Werbung1.gif)
 
@@ -94,7 +97,38 @@ The CRX_PlugIn is  under development.
 
 ---
 
-## TP_ARGS
+
+
+## RAND2REG
+
+ 
+Generates a (pseudo) random number and writes the value into the corresponding register.
+
+Uses $FAST_CLOCK to initialize, but can also be configured.
+
+[RAND2REG](./RAND2REG/readme.md)
+
+
+![tp](./assets/Random_Simple.gif)
+
+---
+## set_invisib
+
+Make programs temporarily invisible or hide them
+
+ [set_invisib](./set_invisib/readme.md)
+
+
+![set_invisib.gif](./assets/SET_PROGS_INVISIBLE2.gif)
+
+ ---
+
+
+
+## ~~TP_ARGS~~
+
+**dated for later**
+
 
 TP_ARGS can be used to check and log the ARG's which are given to a decent program. 
 This allows a program to use optional ARG's
@@ -131,23 +165,9 @@ CALL SET_PR(10,100,0,0,0,0,0)
 
 ---
 
+## ~~PING~~
 
-## RANDOM
-
-
-Generates a (pseudo) random number and writes the value into the corresponding register.
-
-Uses $FAST_CLOCK to initialize, but can also be configured.
-
----
-## set_invisib(le)
-
-
-Make programs temporarily invisible or hide them
-  
- ---
-
-## PING
+**dated for later**
 
 
 A simple program for "pinging" network participants
@@ -156,7 +176,10 @@ A simple program for "pinging" network participants
 ---
 
 
-## CRC-Tools
+## ~~CRC-Tools~~
+
+**not a program, but an API**
+**dated for later**
 
 
 Enables the calculation of different checksums:
@@ -176,6 +199,7 @@ Replaces the internal command
 
 
 ***TP_WRITE*** is the more powerful alternative :-)
+
 
 ---
 ---
