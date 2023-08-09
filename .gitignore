@@ -5,4 +5,4 @@
 *.tp
 *.exe
 *.ini
-*.gitignore
+.gitignore
