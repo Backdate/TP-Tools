@@ -2,7 +2,9 @@
 
 **Please inform us of any oddities with the texts. We are not native english speakers** 
 
-**Until mid of august 2023 the tools are more "alpha" than "beta".There will be lot of updates, since of missing features** 
+**FEATURE FREEZE, Start of stabilization phase until 2023/08/18** 
+
+ 
 
 ---
 
@@ -42,7 +44,7 @@ If there is no corresponding subfolder, the version is (currently) not available
 If the *Arg-Wizard* can be used or there is a CRX plug-in this is described or explained.
 
 ## Program structure
-Currently the programs "TP_VIEW" and "TP_WRITE" use a "uniform" API.
+Currently the programs "TP_VIEW" and "TP_WRITE" uses a "uniform" API.
 
 - Simple commands are called or executed with a string containing the command name.
   - :CALL TP_VIEW('HELP');
