@@ -4,11 +4,14 @@
 
 **FEATURE FREEZE, Start of stabilization phase until 2023/08/18** 
 
- 
 
 ---
 
 # TP-Tools (beta)
+
+ check the latest *release* here:
+
+ https://github.com/Backdate/TP-Tools/releases
 
 **FREE for commercial use**
 
