@@ -31,6 +31,17 @@
 <p>Some commands require several parameters or arguments.</p>
 <p>[Optional arguments in square brackets.]</p>
 <p><em>Info: check <strong>tp_view-va</strong> file to check cmd-states and internal cmd_list.</em></p>
+<h3 id="argument-wizard">ARGUMENT WIZARD</h3>
+<p><strong>This is optional.</strong></p>
+<p>Use this feature if you like the dialog based programming and the 'code' style.</p>
+<p><em>Check Fanuc documentation  &quot;Wizard to Input Arguments&quot; inside handling tool document</em></p>
+<ul>
+<li>We provide a (template) file  for R-30iBPlus (V9.10 and up)</li>
+<li>It's up to the user to check file naming problems like duplicates/collisions with other programs (.e.g. TP_WRITE)</li>
+<li>assemble the files to your needs</li>
+<li>Upload the file with  <em>[LOAD]</em> from TP or upload with ftp client to FR device.</li>
+<li>To 'uninstall' delete file from FR device</li>
+</ul>
 <hr>
 <h3 id="help-11">HELP (11)</h3>
 <p><code>:TP_VIEW('HELP'); </code> <strong>or</strong>
