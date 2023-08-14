@@ -32,6 +32,21 @@ Some commands require several parameters or arguments.
 
 *Info: check **tp_write-va** file to check cmd-states and internal cmd_list.*
 
+### ARGUMENT WIZARD
+ 
+ **This is optional.**
+
+ Use this feature if you like the dialog based programming and the 'code' style.
+
+
+ *Check Fanuc documentation  "Wizard to Input Arguments" inside handling tool document*
+
+-  We provide a (template) file  for R-30iBPlus (V9.10 and up)
+-  It's up to the user to check file naming problems like duplicates/collisions with other programs (.e.g. TP_VIEW)
+-  Upload the file with  *[LOAD]* from TP or upload with ftp client to FR device.
+-  To 'uninstall' delete file from FR device
+
+
 ---
 ## PARSE
  All (dynamic) strings will be parsed **only** if there is an extra/additional argument!
