@@ -2,12 +2,9 @@
 
 **Please inform us of any oddities with the texts. We are not native english speakers** 
 
-**FEATURE FREEZE, Start of stabilization phase until 2023/08/18** 
-
-
 ---
 
-# TP-Tools (beta)
+# TP-Tools
 
  check the latest *release* here:
 
