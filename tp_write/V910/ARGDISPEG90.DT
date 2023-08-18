@@ -1,0 +1,34 @@
+[PROGRAM]
+NAME = "TP_WRITE"
+ARGUMENT = '3'
+[ARGUMENT]
+V01="HELP":'11',"FORCE.USER":'51', "FORCE.USERWIDE":'52', "CLEAR.USER":'61', "CLEAR.TPERROR":'62', "CLEAR.TPPROMT":'63', "CLEAR.TPFUNC":'64', "CLEAR.TPSTATUS":'65' ,"USER":'21',"TPERROR":'22',"TPPROMPT":'23',"TPFUNC":'24',"TPSTATUS":'25',"SR":'26',"CONSOLE":'27',"POST_ERR":'28',"APSH_ERR":'29'
+
+{ write.... }
+[V01, '21']
+S02 = "Str2Write"
+[V01, '22']
+S02 = "Str2Write"
+[V01, '23']
+S02 = "Str2Write"
+[V01, '24']
+S02 = "Str2Write"
+[V01, '25']
+S02 = "Str2Write"
+[V01, '26']
+S02 = "Str2Write"
+[V01, '27']
+S02 = "Str2Write"
+[V01, '28']
+V02 = "INFO":'0',
+      "WARN":'1',
+      "ERR":'2'
+N03 = "Sys-Err_Num"
+[V01, '29']
+V02 = "INFO":'0',
+      "WARN":'1',
+      "ERR":'2'
+S03 = "Str2Write"
+
+
+[ENDPROGRAM]

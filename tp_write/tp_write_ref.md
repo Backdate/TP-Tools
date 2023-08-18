@@ -120,15 +120,28 @@ Some commands require several parameters or arguments.
 
 ---
 ### POST_ERR (28)
-```: CALL TP_WRITE('POST_ERR',ERRCODE,SEV); ```
+```: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); ```
+
+```:  CALL TP_WRITE("POST_ERR"=28,"INFO"=0,"Sys-Err_Num"=0) ;```
+ - Severity : 
+    - INFO:0 =  Nothing
+    -  WARN:1 = PAUSE
+    - ERROR:2 = ABORT
 
 **Posts an error with given err-id and severity**
 
 ---
 ### APSH_ERR (29)
-```: CALL TP_WRITE('APSH_ERR','Hello User',SEV); ```
+```: CALL TP_WRITE('APSH_ERR',SEV,'Hello User'); ```
 
-**Posts an APSH_ERR with given String ans severity**
+```:  CALL TP_WRITE("APSH_ERR"=29,"INFO"=0,"Str2Write"='...') ;```
+
+  - Severity : 
+    - INFO:0 =  Nothing
+    -  WARN:1 = PAUSE
+    - ERROR:2 = ABORT
+
+**Posts an APSH_ERR with given String and severity**
 
 ---
 ### CLEAR commands

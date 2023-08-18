@@ -510,12 +510,32 @@ xref {
 <p><strong>Writes a (dynamic)string to CONSOLE</strong></p>
 <hr>
 <h3 id="post_err-28">POST_ERR (28)</h3>
-<p><code>: CALL TP_WRITE('POST_ERR',ERRCODE,SEV); </code></p>
+<p><code>: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); </code></p>
+<p><code>:  CALL TP_WRITE(&quot;POST_ERR&quot;=28,&quot;INFO&quot;=0,&quot;Sys-Err_Num&quot;=0) ;</code></p>
+<ul>
+<li>Severity :
+<ul>
+<li>INFO:0 =  Nothing</li>
+<li>WARN:1 = PAUSE</li>
+<li>ERROR:2 = ABORT</li>
+</ul>
+</li>
+</ul>
 <p><strong>Posts an error with given err-id and severity</strong></p>
 <hr>
 <h3 id="apsh_err-29">APSH_ERR (29)</h3>
-<p><code>: CALL TP_WRITE('APSH_ERR','Hello User',SEV); </code></p>
-<p><strong>Posts an APSH_ERR with given String ans severity</strong></p>
+<p><code>: CALL TP_WRITE('APSH_ERR',SEV,'Hello User'); </code></p>
+<p><code>:  CALL TP_WRITE(&quot;APSH_ERR&quot;=29,&quot;INFO&quot;=0,&quot;Str2Write&quot;='...') ;</code></p>
+<ul>
+<li>Severity :
+<ul>
+<li>INFO:0 =  Nothing</li>
+<li>WARN:1 = PAUSE</li>
+<li>ERROR:2 = ABORT</li>
+</ul>
+</li>
+</ul>
+<p><strong>Posts an APSH_ERR with given String and severity</strong></p>
 <hr>
 <h3 id="clear-commands">CLEAR commands</h3>
 <p><code>: CALL TP_WRITE('CLEAR.xxxx'); </code></p>

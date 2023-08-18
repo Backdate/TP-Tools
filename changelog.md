@@ -1,6 +1,8 @@
 
 # Changelog
 ## Changes
+- *23/08/18* : **IMPORTANT** changed API for POST_ERR and APSH_ERR!check reference file
+- *23/08/18* : **FIX** TP_WRITE POST_ERR and APSH_ERR ArgWizard incompatibility
 - *23/08/18* : **FIX** wrong arg number error information(TP_WRITE)
 - *23/08/17* : **NEW** release candidate 1 (RC1)
 - *23/08/14* : **NEW** beta release
