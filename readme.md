@@ -80,7 +80,6 @@ e.g.
  :  CALL TP_VIEW('CLEAR_VIEW',1) ;
 ```
 
-![ArgWiz](tp_write/assets/TP_WRITE_ARG_WIZ.gif)
 
 
 ---
@@ -98,9 +97,11 @@ Among others, the following are available for selection:
   - UserScreen
   - TPError
 
-The usage with the Arg-Wizard is planned.
-The CRX_PlugIn is  under development.
+The usage with the Arg-Wizard is implemented.
 
+![ArgWiz](tp_write/assets/TP_WRITE_ARG_WIZ.gif)
+
+The CRX_PlugIn is  under development.
 
 ---
 

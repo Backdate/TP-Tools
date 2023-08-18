@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *23/08/14* : **fix**doc link error
 - *23/08/14* : **ADD** Arg Wizard updates
 - *23/08/18* : **IMPORTANT** changed API for POST_ERR and APSH_ERR!check reference file
 - *23/08/18* : **FIX** TP_WRITE POST_ERR and APSH_ERR ArgWizard incompatibility
