@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *23/08/18* : **INFO** : https://github.com/Backdate/TP-Tools/discussions/2
 - *23/08/18* : **FIX**doc erors 
 - *23/08/18* : **ADD** Arg Wizard updates
 - *23/08/18* : **IMPORTANT** changed API for POST_ERR and APSH_ERR!check reference file
