@@ -43,6 +43,7 @@ If there is no corresponding subfolder, the version is (currently) not available
 
 If the *Arg-Wizard* can be used or there is a CRX plug-in this is described or explained.
 
+
 ## Program structure
 Currently the programs "TP_VIEW" and "TP_WRITE" uses a "uniform" API.
 
@@ -78,6 +79,10 @@ e.g.
  :  CALL TP_VIEW('LOAD_VIEW',3) ;
  :  CALL TP_VIEW('CLEAR_VIEW',1) ;
 ```
+
+![ArgWiz](tp_write/assets/TP_WRITE_ARG_WIZ.gif)
+
+
 ---
 ## TP_WRITE
 

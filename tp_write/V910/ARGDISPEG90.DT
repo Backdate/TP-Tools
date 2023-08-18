@@ -16,7 +16,8 @@ S02 = "Str2Write"
 [V01, '25']
 S02 = "Str2Write"
 [V01, '26']
-S02 = "Str2Write"
+N02 = "ID"
+S03 = "Str2Write"
 [V01, '27']
 S02 = "Str2Write"
 [V01, '28']

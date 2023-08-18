@@ -110,6 +110,8 @@ Some commands require several parameters or arguments.
 ### SR (26)
 ```: CALL TP_WRITE('SR',idx,'Hello User'); ```
 
+ ```:  CALL TP_WRITE("SR"=26,"ID"=1,"Str2Write"='Reg1 = %R',1) ; ```
+
 **Writes a (dynamic)string to SR with given String and index**
 
 ---
