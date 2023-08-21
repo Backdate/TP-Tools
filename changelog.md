@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *23/08/21* : **FIX** ARGDISP file
 - *23/08/21* : **UPDATE** Changed Screen ID's from 2x to3x --> https://github.com/Backdate/TP-Tools/discussions/2
 - *23/08/18* : **INFO** : https://github.com/Backdate/TP-Tools/discussions/2
 - *23/08/18* : **FIX**doc erors 
