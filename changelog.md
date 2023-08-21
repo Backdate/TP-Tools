@@ -19,6 +19,11 @@
 -  prepare translations
 
 ## Ideas V1.1 (Sep/Oct 23)
+CRX Plugin with some functions of TP-Tools. A lot of functions won't fit for CRX/Tablet -TP user. That's the reason we had to change the TP_View Screen Command Id range from 2x to 3x.
+
+![CRX_PlugIn_Brainstorm1](assets/CRX_PlugIn_Brainstorm1.JPG)
+
+
 
 ### New feature
 Write to a file
