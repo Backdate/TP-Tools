@@ -111,37 +111,37 @@ Some commands require several parameters or arguments.
 **Screen commands shows default screen/window combination**
 
 ---
-### SCREEN.SINGLE (21)
+### SCREEN.SINGLE (31)
 ```:TP_VIEW('SCREEN.SINGLE'); ```
 
 **default window inside SingleScreen**
 
 ---
-### SCREEN.WIDE (22)
+### SCREEN.WIDE (32)
 ```:TP_VIEW('SCREEN.WIDE'); ```
 
 **default window inside SingleScreen WIDE**
 
 ---
-### SCREEN.DOUBLE (23)
+### SCREEN.DOUBLE (33)
 ```:TP_VIEW('SCREEN.DOUBLE'); ```
 
 **default window(s) inside DOUBLEScreen**
 
 ---
-### SCREEN.TRIPLE (24)
+### SCREEN.TRIPLE (34)
 ```:TP_VIEW('SCREEN.TRIPLE'); ```
 
 **default window(s) inside TRIPLEScreen**
 
 ---
-### SCREEN.TREEPRIM (25)
+### SCREEN.TREEPRIM (35)
 ```:TP_VIEW('SCREEN.TREEPRIM'); ```
 
 **default window(s) inside TreeView and PrimaryScreen**
 
 ---
-### SCREEN.STATPRIM (26)
+### SCREEN.STATPRIM (36)
 ```:TP_VIEW('SCREEN.STATPRIM'); ```
 
 **default window(s) inside StatusScreen and PrimaryScreen**
