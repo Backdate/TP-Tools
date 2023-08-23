@@ -80,7 +80,9 @@ e.g.
  :  CALL TP_VIEW('CLEAR_VIEW',1) ;
 ```
 
+The CRX_PlugIn is  under development.
 
+[CRX_PlugIn] (https://github.com/Backdate/TP-Tools/discussions/3)
 
 ---
 ## TP_WRITE
@@ -102,6 +104,8 @@ The usage with the Arg-Wizard is implemented.
 ![ArgWiz](tp_write/assets/TP_WRITE_ARG_WIZ.gif)
 
 The CRX_PlugIn is  under development.
+
+[CRX_PlugIn] (https://github.com/Backdate/TP-Tools/discussions/3)
 
 ---
 

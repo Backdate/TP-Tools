@@ -425,7 +425,8 @@ xref {
 <li>TPError</li>
 <li>StringRegister</li>
 </ul>
-<p><em>In most cases the string length is truncated by <em>System</em> at length of 40.</em></p>
+<p><em>The string length for each <strong>ARG</strong> is 34</em></p>
+<p><em>In most cases the string length, of the <strong>str2write</strong> is truncated by <strong>system</strong> at length of 40.</em></p>
 <p>The shrinked version(<em>tp_write_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
 <ul>
 <li><code>Teach Pendant  : TP_WRITE('HELP'); </code></li>
@@ -452,7 +453,7 @@ xref {
 <hr>
 <h2 id="parse">PARSE</h2>
 <p>All (dynamic) strings will be parsed <strong>only</strong> if there is an extra/additional argument!</p>
-<p>'String parser' searches for some special &quot;CHARS&quot;:</p>
+<p>'String parser' searches for special &quot;string&quot;:</p>
 <ul>
 <li>Register Value string  = '%R'
 <ul>
@@ -461,7 +462,17 @@ xref {
 </li>
 <li>Time  string  = '%TIME'
 <ul>
-<li>needs also an extra argument: '0'
+<li>needs extra argument: '0'
+<ul>
+<li>otherwise parser is not executed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TimeStamp  = '%FAST_CLOCK'
+<ul>
+<li>value is <em>[SYSTEM]</em>$FAST_CLOCK</li>
+<li>needs extra argument: '0'
 <ul>
 <li>otherwise parser is not executed</li>
 </ul>
@@ -514,26 +525,43 @@ xref {
 <p><code>: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); </code></p>
 <p><code>:  CALL TP_WRITE(&quot;POST_ERR&quot;=28,&quot;INFO&quot;=0,&quot;Sys-Err_Num&quot;=0) ;</code></p>
 <ul>
-<li>Severity :
+<li>SEV / Severity :
 <ul>
 <li>INFO:0 =  Nothing</li>
 <li>WARN:1 = PAUSE</li>
 <li>ERROR:2 = ABORT</li>
 </ul>
 </li>
+<li>ERRCODE / ErrorCode
+<ul>
+<li>Fanuc error code
+<ul>
+<li>ffccc (decimal)
+<ul>
+<li>ff represents the facility code of the error</li>
+<li>ccc represents the error code within the specified facility</li>
 </ul>
-<p><strong>Posts an error with given err-id and severity</strong></p>
+</li>
+<li>check fanuc documentation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Posts an error with given ErrorCode and severity</strong></p>
 <hr>
 <h3 id="apsh_err-29">APSH_ERR (29)</h3>
 <p><code>: CALL TP_WRITE('APSH_ERR',SEV,'Hello User'); </code></p>
 <p><code>:  CALL TP_WRITE(&quot;APSH_ERR&quot;=29,&quot;INFO&quot;=0,&quot;Str2Write&quot;='...') ;</code></p>
 <ul>
-<li>Severity :
+<li><p>Severity :</p>
 <ul>
 <li>INFO:0 =  Nothing</li>
 <li>WARN:1 = PAUSE</li>
 <li>ERROR:2 = ABORT</li>
 </ul>
+</li>
+<li><p>Str2Write</p>
 </li>
 </ul>
 <p><strong>Posts an APSH_ERR with given String and severity</strong></p>

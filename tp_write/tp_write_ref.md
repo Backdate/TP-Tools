@@ -9,7 +9,9 @@ Among others, the following are available for selection:
 - TPError
 - StringRegister
 
-*In most cases the string length is truncated by *System* at length of 40.*
+*The string length for each **ARG** is 34*
+
+*In most cases the string length, of the **str2write** is truncated by **system** at length of 40.*
 
 
 The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.
@@ -51,11 +53,15 @@ Some commands require several parameters or arguments.
 ## PARSE
  All (dynamic) strings will be parsed **only** if there is an extra/additional argument!
 
-'String parser' searches for some special "CHARS":	
+'String parser' searches for special "string":	
   - Register Value string  = '%R'
 	- StringRegister Value string   = '%SR'
   - Time  string  = '%TIME' 
-    - needs also an extra argument: '0'
+    - needs extra argument: '0'
+      - otherwise parser is not executed
+  - TimeStamp  = '%FAST_CLOCK'
+    - value is *[SYSTEM]*$FAST_CLOCK 
+    - needs extra argument: '0'
       - otherwise parser is not executed
 
 ```:CALL TP_WRITE('USER','Value of R[1]is %R',1);```
@@ -125,12 +131,18 @@ Some commands require several parameters or arguments.
 ```: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); ```
 
 ```:  CALL TP_WRITE("POST_ERR"=28,"INFO"=0,"Sys-Err_Num"=0) ;```
- - Severity : 
+ - SEV / Severity : 
     - INFO:0 =  Nothing
     -  WARN:1 = PAUSE
     - ERROR:2 = ABORT
+- ERRCODE / ErrorCode
+  - Fanuc error code
+    - ffccc (decimal)
+      - ff represents the facility code of the error
+      - ccc represents the error code within the specified facility
+    - check fanuc documentation 
 
-**Posts an error with given err-id and severity**
+**Posts an error with given ErrorCode and severity**
 
 ---
 ### APSH_ERR (29)
@@ -142,6 +154,8 @@ Some commands require several parameters or arguments.
     - INFO:0 =  Nothing
     -  WARN:1 = PAUSE
     - ERROR:2 = ABORT
+  
+  - Str2Write
 
 **Posts an APSH_ERR with given String and severity**
 
