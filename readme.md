@@ -114,17 +114,23 @@ The CRX_PlugIn is  under development.
 A folder with simple "one command" progs.
 Result is written to specified register
 
-- SIN2REG --> sine to register
+- **sin2REG** --> sine to register
   - e.g. :  CALL SIN2REG(33.5,1) ;
-- COS2REG --> cosine to register
+- **cos2REG** --> cosine to register
   - e.g. :  CALL COS2REG(33.5,2) ;
-- atan22REG --> atan2 to register
+- **atan22REG** --> atan2 to register
   - e.g. :  CALL ATAN22REG((-100),100,3) ;
-- sqrt2REG --> square root to register
+- **sqrt2REG** --> square root to register
   - e.g. :  CALL SQRT2REG(33.5,4) ;
-- rand2reg --> random to register
+- **rand2reg** --> random to register
   - e.g. :  CALL rand2reg(33.5,100,4,45) ;
   -  check subfolder for info
+- **ping2reg** --> ping a host/IP and write result to reg
+  - e.g. :  CALL ping2reg('192.168.1.1',1) ;
+  - needed option: User Socket Msg (R648)
+    - Error INTP-320 Undefined builtin if not installed
+  - Result value 1 : successfull ping
+  - Result value 0 : no successfull ping
 
 ### RAND2REG
 
@@ -192,15 +198,6 @@ CALL SET_PR(10,100,0,0,0,0,0)
 
 ---
 
-## ~~PING~~
-
-**dated for later**
-
-
-A simple program for "pinging" network participants
-
-
----
 
 
 ## ~~CRC-Tools~~

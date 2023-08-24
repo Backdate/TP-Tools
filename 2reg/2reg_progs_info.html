@@ -420,30 +420,42 @@ xref {
 <p>Simple Programs with one dedicated function.</p>
 <h2 id="result-to-register-progs">Result to Register Progs:</h2>
 <ul>
-<li>SIN2REG --&gt; sine to register
+<li><strong>sin2REG</strong> --&gt; sine to register
 <ul>
 <li>e.g. :  CALL SIN2REG(33.5,1) ;</li>
 </ul>
 </li>
-<li>COS2REG --&gt; cosine to register
+<li><strong>cos2REG</strong> --&gt; cosine to register
 <ul>
 <li>e.g. :  CALL COS2REG(33.5,2) ;</li>
 </ul>
 </li>
-<li>atan22REG --&gt; atan2 to register
+<li><strong>atan22REG</strong> --&gt; atan2 to register
 <ul>
 <li>e.g. :  CALL ATAN22REG((-100),100,3) ;</li>
 </ul>
 </li>
-<li>sqrt2REG --&gt; square root to register
+<li><strong>sqrt2REG</strong> --&gt; square root to register
 <ul>
 <li>e.g. :  CALL SQRT2REG(33.5,4) ;</li>
 </ul>
 </li>
-<li>rand2reg --&gt; random to register
+<li><strong>rand2reg</strong> --&gt; random to register
 <ul>
 <li>e.g. :  CALL rand2reg(33.5,100,4,45) ;</li>
 <li>check subfolder for info</li>
+</ul>
+</li>
+<li><strong>ping2reg</strong> --&gt; ping a host/IP and write result to reg
+<ul>
+<li>e.g. :  CALL ping2reg('192.168.1.1',1) ;</li>
+<li>needed option: User Socket Msg (R648)
+<ul>
+<li>Error INTP-320 Undefined builtin if not installed</li>
+</ul>
+</li>
+<li>Result value 1 : successfull ping</li>
+<li>Result value 0 : no successfull ping</li>
 </ul>
 </li>
 </ul>
