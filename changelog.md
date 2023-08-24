@@ -1,7 +1,7 @@
 
 # Changelog
 ## Changes
-- *23/08/24* : **ReleaseCandidate1**
+- *23/08/24* : **Release Candidate 1**
 - *23/08/24* : **ADD** ping2reg prog
 - *23/08/24* : **ADD** New folder **2REG** simple math progs 
 - *23/08/23* : **FIX** TP_WRITE: parser timestamp %FAST_CLOCK printing
