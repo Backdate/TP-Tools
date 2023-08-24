@@ -110,19 +110,34 @@ The CRX_PlugIn is  under development.
 ---
 
 
+## 2REG
+A folder with simple "one command" progs.
+Result is written to specified register
 
-## RAND2REG
+- SIN2REG --> sine to register
+  - e.g. :  CALL SIN2REG(33.5,1) ;
+- COS2REG --> cosine to register
+  - e.g. :  CALL COS2REG(33.5,2) ;
+- atan22REG --> atan2 to register
+  - e.g. :  CALL ATAN22REG((-100),100,3) ;
+- sqrt2REG --> square root to register
+  - e.g. :  CALL SQRT2REG(33.5,4) ;
+- rand2reg --> random to register
+  - e.g. :  CALL rand2reg(33.5,100,4,45) ;
+  -  check subfolder for info
+
+### RAND2REG
 
  
 Generates a (pseudo) random number and writes the value into the corresponding register.
 
 Uses $FAST_CLOCK to initialize, but can also be configured.
 
-[RAND2REG](./RAND2REG/readme.md)
+
+[Title](2reg/rand2reg/readme.md)
 
 
-![tp](./assets/Random_Simple.gif)
-
+![Alt text](2reg/rand2reg/assets/Random_Simple.gif)
 ---
 ## set_invisib
 

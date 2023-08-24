@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *23/08/24* : **ADD** New folder **2REG** simple math progs 
 - *23/08/23* : **FIX** TP_WRITE: parser timestamp %FAST_CLOCK printing
 - *23/08/23* : **ADD/QUESTION** Should we add "TP_MATH" --> https://github.com/Backdate/TP-Tools/discussions/4
 - *23/08/23* : **ADD/UPDATE** TP_WRITE: parser timestamp %FAST_CLOCK
