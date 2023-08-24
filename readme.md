@@ -144,7 +144,9 @@ Uses $FAST_CLOCK to initialize, but can also be configured.
 
 
 ![Alt text](2reg/rand2reg/assets/Random_Simple.gif)
+
 ---
+
 ## set_invisib
 
 Make programs temporarily invisible or hide them
@@ -154,76 +156,6 @@ Make programs temporarily invisible or hide them
 
 ![set_invisib.gif](./assets/SET_PROGS_INVISIBLE2.gif)
 
- ---
-
-
-
-## ~~TP_ARGS~~
-
-**dated for later**
-
-
-TP_ARGS can be used to check and log the ARG's which are given to a decent program. 
-This allows a program to use optional ARG's
-
-e.g.
-```
-CALL SET_PR(10,100,0,0)
-CALL SET_PR(10,100,0,0,0,0,0)
-
-..SET_PR
-    :CALL TP_ARGS('DO.COUNT',AR[1],AR[2],AR[3],AR[4],AR[5],AR[6],AR[7]);
-    :IF $[TP_ARGS]COUNT = 4;
-        :PR[AR1,1]=AR[2];
-        :PR[AR1,2]=AR[3];
-        :PR[AR1,3]=AR[4];
-        :PR[AR1,4]=0;
-        :PR[AR1,5]=0;
-        :PR[AR1,6]=0;
-        :END;
-    :ENDIF;
-    :IF $[TP_ARGS]COUNT = 7;
-        :PR[AR1,1]=AR[2];
-        :PR[AR1,2]=AR[3];
-        :PR[AR1,3]=AR[4];
-        :PR[AR1,4]=AR[5];
-        :PR[AR1,5]=AR[6];
-        :PR[AR1,6]=AR[7];
-        :END;
-    :ENDIF;
-    !Number of ARGS invalid;
-    :ABORT;
-
-```
-
----
-
-
-
-## ~~CRC-Tools~~
-
-**not a program, but an API**
-**dated for later**
-
-
-Enables the calculation of different checksums:
-  
-  - MODBUS
-  - CCITT
-  - MCRF4XX
-
----
-
-## ~~MESSAGE~~
-
-
-Replaces the internal command
-
-    MESSAGE[string].
-
-
-***TP_WRITE*** is the more powerful alternative :-)
-
 
 ---
 ---
@@ -231,7 +163,7 @@ Replaces the internal command
 
 - Why xy ? --> Check  faq.md
 - I need more technical information. --> Check  DeepDive.md
-- Where ca I find a changelog? Use github and check info files.
+- Where can I find a changelog? Use github and check info files.
 
 ---
 
