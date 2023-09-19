@@ -1,7 +1,7 @@
 
 # Changelog
 ## Changes
-- *23/08/31* : **TP-Tools 1.0.41 ADD ord2reg**
+- *23/08/31* : **TP-Tools 1.0.42 ADD ord2reg/update readme**
 - *23/08/31* : **TP-Tools 1.0.40**
 - *23/08/24* : **Release Candidate 1**
 - *23/08/24* : **ADD** ping2reg prog

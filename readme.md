@@ -131,6 +131,9 @@ Result is written to specified register
     - Error INTP-320 Undefined builtin if not installed
   - Result value 1 : successfull ping
   - Result value 0 : no successfull ping
+- **ord2reg** --> numeric ASCII code from given CHAR to register
+  - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
+  -  will write 66 to register 1, because second(2) Char of string is 'B'
 
 ### RAND2REG
 
