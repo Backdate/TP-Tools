@@ -4,6 +4,10 @@
 
 ---
 
+[click here for german readme](readme.de.md)
+
+---
+---
 # TP-Tools
 
  check the latest *release* here:

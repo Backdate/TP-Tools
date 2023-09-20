@@ -18,7 +18,7 @@ The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded 
 
 - ```Teach Pendant  : TP_WRITE('HELP'); ```
 - ```web browser    : _hostname_/karel/tp_write```
-- ```FTP upload     : tp_write_ref.htm --> FR: CALL TP_WRITE_ref.htm  ```
+- ```FTP upload     : tp_write_ref.htm --> FR:TP_WRITE_ref.htm  ```
 
 ## Commands
 

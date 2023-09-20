@@ -1,6 +1,8 @@
 # 2REG PROGS
 Simple Programs with one dedicated function.
 
+**Program will ABORT when invalid RegIndex is passed**
+
 ## Result to Register Progs:
 
 - **sin2REG** --> sine to register
@@ -20,9 +22,17 @@ Simple Programs with one dedicated function.
     - Error INTP-320 Undefined builtin if not installed
   - Result value 1 : successfull ping
   - Result value 0 : no successfull ping
-- **ord2reg** --> numeric ASCII code from given CHAR to register
+- **ord2reg** --> numeric ASCII code from given char to register
   - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
   -  will write 66 to register 1, because second(2) Char of string is 'B'
+
+### Local Register
+R30iBPlus V940 progs support writing to local register of calling TP prog.
+
+*Local regs are setup in **detail** screen of selected tp prog*
+
+    :  CALL ord2reg('ABCDE123,2,10001) ;
+    :  IF R[10001].....                ; 
 ---
 ---
 
