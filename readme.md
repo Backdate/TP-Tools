@@ -34,10 +34,10 @@ A license file does NOT have to be copied to the robot controller.
 ---
 ### Controller and Version
 
-- R-30iA (< V7.50)
-- R-30iB (< V8.10)
-- R-30iBPlus (< V9.10)
-- R-30iBPlus/CRX (< V9.40/42)
+- R-30iA (V7.50)
+- R-30iB (V8.10)
+- R-30iBPlus (V9.10)
+- R-30iBPlus/CRX (V9.40/42)
 
 If there is no corresponding subfolder, the version is (currently) not available.
 
@@ -69,8 +69,7 @@ You can switch between
 
 [tp_view](/tp_view/readme.md)
 
-![tp_view](./assets/TP_VIEW_Example1.gif)
-
+![tp_view](tp_view/assets/TP_VIEW_Example1.gif)
 
 e.g.
 ```
@@ -80,9 +79,7 @@ e.g.
  :  CALL TP_VIEW('CLEAR_VIEW',1) ;
 ```
 
-The CRX_PlugIn is  under development.
-
-[CRX_PlugIn] (https://github.com/Backdate/TP-Tools/discussions/3)
+**A CRX_PlugIn called *Tablet-TP-Tools* is under development.**
 
 ---
 ## TP_WRITE
@@ -91,7 +88,7 @@ TP_WRITE can be used to write single-line (dynamic) messages to various "screens
 
 [tp_write](/tp_write/readme.md)
 
-![tp](./assets/Werbung1.gif)
+![tp](./tp_write/assets/Werbung1.gif)
 
 Among others, the following are available for selection:
 
@@ -99,13 +96,11 @@ Among others, the following are available for selection:
   - UserScreen
   - TPError
 
-The usage with the Arg-Wizard is implemented.
+The Arg-Wizard is implemented.
 
 ![ArgWiz](tp_write/assets/TP_WRITE_ARG_WIZ.gif)
 
-The CRX_PlugIn is  under development.
-
-[CRX_PlugIn] (https://github.com/Backdate/TP-Tools/discussions/3)
+**A CRX_PlugIn called *Tablet-TP-Tools* is under development.**
 
 ---
 
@@ -135,6 +130,9 @@ Result is written to specified register
   - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
   -  will write 66 to register 1, because second(2) Char of string is 'B'
 
+[2REG](2reg/readme.md)
+
+
 ### RAND2REG
 
  
@@ -143,7 +141,7 @@ Generates a (pseudo) random number and writes the value into the corresponding r
 Uses $FAST_CLOCK to initialize, but can also be configured.
 
 
-[Title](2reg/rand2reg/readme.md)
+[RAND2REG](2reg/rand2reg/readme.md)
 
 
 ![Alt text](2reg/rand2reg/assets/Random_Simple.gif)
@@ -157,7 +155,7 @@ Make programs temporarily invisible or hide them
  [set_invisib](./set_invisib/readme.md)
 
 
-![set_invisib.gif](./assets/SET_PROGS_INVISIBLE2.gif)
+![set_invisib.gif](./set_invisib/assets/SET_PROGS_INVISIBLE2.gif)
 
 
 ---
@@ -166,7 +164,7 @@ Make programs temporarily invisible or hide them
 
 - Why xy ? --> Check  faq.md
 - I need more technical information. --> Check  DeepDive.md
-- Where can I find a changelog? Use github and check info files.
+- Where can I find a changelog? Use github and check changelog.md.
 
 ---
 
