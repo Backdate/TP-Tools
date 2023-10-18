@@ -47,7 +47,7 @@ Wenn der *Arg-Wizard* verwendet werden kann oder ein CRX-Plugin vorhanden ist, w
 Derzeit verwenden die Programme "TP_VIEW" und "TP_WRITE" eine "einheitliche" API.
 
 - Einfache Befehle werden mit einem String aufgerufen oder ausgeführt, der den Befehlsnamen enthält.
-  - :AUFRUF TP_VIEW('HELP');
+  - :CALL TP_VIEW('HELP');
 - Bei Befehlen der gleichen Funktionsgruppe wird der Gruppenname durch einen Punkt vom Befehlsnamen getrennt.
   - :CALL TP_VIEW('FORCE.VIEW');
 - Befehle können (optionale) Parameter/Argumente haben.
