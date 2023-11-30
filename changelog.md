@@ -15,11 +15,12 @@
 - ... older stuff
 
 ### Next steps (planned)
--  prepare translations
+-  ~~prepare translations~~
 -  docs bugfixing
 
-### New features 1.2 (Oct/nov 23)
+### Planned features 1.2 (Q1 24)
 - just additions, no breaking changes
+- add TP_SHOW ; easy Dialogs and HMI
 - CRX Plugin with some functions of TP-Tools. 
     A lot of functions won't fit or are obsolet for CRX/Tablet-TP user.
 
