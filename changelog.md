@@ -1,7 +1,8 @@
 
 # Changelog
 ## Changes
-- *2024/01/04* : *changed internal tool chain ; update friex-browser (bug)
+- *2024/07/24* : typo
+- *2024/01/04* : changed internal tool chain ; update friex-browser (bug)
 - *2023/10/18* : **TP-Tools 1.1.48 release: translations and local Register support ; binary assets**
 - *23/09/20* : **TP-Tools 1.1.44 pre release: translations and local Register support**
 - ...
@@ -15,10 +16,10 @@
 -  ~~prepare translations~~
 -  docs bugfixing
 
-### Planned features 1.2 (Q1 24)
+### Planned features 1.2 (Q4 24)
 - just additions, no breaking changes
-- add TP_SHOW ; easy Dialogs and HMI
-- CRX Plugin with some functions of TP-Tools. 
+- maybe add TP_SHOW ; easy Dialogs and HMI
+- CRX Plugin with some ideas of TP-Tools. 
     A lot of functions won't fit or are obsolet for CRX/Tablet-TP user.
 
 ![CRX_PlugIn_Brainstorm1](assets/CRX_PlugIn_Brainstorm1.JPG)

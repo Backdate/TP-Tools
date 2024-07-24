@@ -2,7 +2,7 @@
 
 TP_WRITE can be used to write single-line (dynamic) messages to various "screens".
 
-Among others, the following are available for selection:
+Among others, the following "targets" are available for selection:
 
 - Console
 - UserScreen

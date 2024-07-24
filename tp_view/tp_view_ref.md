@@ -1,4 +1,4 @@
-# TP VIEW Command Reference
+# TP VIEW Command Reference 
 
 Use TP_VIEW to switch/change the iPendant windows/screens .
 
@@ -65,7 +65,7 @@ Some commands require several parameters or arguments.
 
     Default : 1
 
-- equal command: **FORCE.VIEW**
+- command alias: **FORCE.VIEW**
 - To clear a *user view* use **CLEAR_VIEW-command**
 
 #### To add a new  *user favorite view* use:
@@ -94,7 +94,7 @@ Some commands require several parameters or arguments.
 
 - Forces **'SCREEN.SINGLE'**.
 - **Additionally** the USER Screen/Menu will be shown.
-- equal command: **FORCE.USER**
+- command alias: **FORCE.USER**
 
 ---
 ### WIDE_USER (16)
@@ -104,7 +104,7 @@ Some commands require several parameters or arguments.
 
 - Forces **'SCREEN.WIDE'**. 
 - **Additionally** the USER Screen/Menu will be shown.
-- equal command: **FORCE.USERWIDE**
+- command alias: **FORCE.USERWIDE**
 
 ---
 ## SCREEN Commands 
