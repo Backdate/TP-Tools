@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *2024/08/21* : tp_write V810/V910 compiling/linking problems
 - *2024/07/31* : typo and v-info
 - *2024/01/04* : changed internal tool chain ; update friex-browser (bug)
 - *2023/10/18* : **TP-Tools 1.1.48 release: translations and local Register support ; binary assets**
