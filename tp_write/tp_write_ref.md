@@ -8,6 +8,7 @@ Among others, the following "targets" are available for selection:
 - UserScreen
 - TPError
 - StringRegister
+- TPERR_CONS (TPError and Console)
 
 *The string length for each **ARG** is 34*
 
@@ -158,6 +159,12 @@ Some commands require several parameters or arguments.
   - Str2Write
 
 **Posts an APSH_ERR with given String and severity**
+
+---
+### TPERR_CONS (31)
+```: CALL TP_WRITE('TPERR_CONS','Hello User'); ```
+
+**Writes a (dynamic)string to TPERROR AND Console**
 
 ---
 ### CLEAR commands

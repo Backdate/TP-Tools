@@ -1,6 +1,8 @@
 
 # Changelog
 ## Changes
+- *2024/10/10* : add: tp_write TPERR_CONSOLE command
+- *2024/10/10* : solved: tp_write trim problem 
 - *2024/08/21* : tp_write V810/V910 compiling/linking problems
 - *2024/07/31* : typo and v-info
 - *2024/01/04* : changed internal tool chain ; update friex-browser (bug)

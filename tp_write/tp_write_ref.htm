@@ -18,6 +18,7 @@
 <li>UserScreen</li>
 <li>TPError</li>
 <li>StringRegister</li>
+<li>TPERR_CONS (TPError and Console)</li>
 </ul>
 <p><em>The string length for each <strong>ARG</strong> is 34</em></p>
 <p><em>In most cases the string length, of the <strong>str2write</strong> is truncated by <strong>system</strong> at length of 40.</em></p>
@@ -159,6 +160,10 @@
 </li>
 </ul>
 <p><strong>Posts an APSH_ERR with given String and severity</strong></p>
+<hr>
+<h3 id="tperr_cons-31">TPERR_CONS (31)</h3>
+<p><code>: CALL TP_WRITE('TPERR_CONS','Hello User'); </code></p>
+<p><strong>Writes a (dynamic)string to TPERROR AND Console</strong></p>
 <hr>
 <h3 id="clear-commands">CLEAR commands</h3>
 <p><code>: CALL TP_WRITE('CLEAR.xxxx'); </code></p>
