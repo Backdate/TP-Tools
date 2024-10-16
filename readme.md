@@ -133,6 +133,10 @@ Result is written to specified register
 - **ord2reg** --> numeric ASCII code from given CHAR to register
   - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
   -  will write 66 to register 1, because second(2) Char of string is 'B'
+- **caller2sr / parent2sr** --> writes the parent program name to given **StringRegister**
+  - e.g. :  CALL caller2sr(1) ;
+  - e.g. :  CALL parent2sr(10001) ;
+  -  will write the program name of calling tp program  to register 1
 
 [2REG](2reg/readme.md)
 

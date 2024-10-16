@@ -426,33 +426,33 @@ xref {
 <p><strong>Program will ABORT when invalid RegIndex is passed</strong></p>
 <h2 id="result-to-register-progs">Result to Register Progs:</h2>
 <ul>
-<li><strong>sin2REG</strong> --&gt; sine to register
+<li><p><strong>sin2REG</strong> --&gt; sine to register</p>
 <ul>
 <li>e.g. :  CALL SIN2REG(33.5,1) ;</li>
 </ul>
 </li>
-<li><strong>cos2REG</strong> --&gt; cosine to register
+<li><p><strong>cos2REG</strong> --&gt; cosine to register</p>
 <ul>
 <li>e.g. :  CALL COS2REG(33.5,2) ;</li>
 </ul>
 </li>
-<li><strong>atan22REG</strong> --&gt; atan2 to register
+<li><p><strong>atan22REG</strong> --&gt; atan2 to register</p>
 <ul>
 <li>e.g. :  CALL ATAN22REG((-100),100,3) ;</li>
 </ul>
 </li>
-<li><strong>sqrt2REG</strong> --&gt; square root to register
+<li><p><strong>sqrt2REG</strong> --&gt; square root to register</p>
 <ul>
 <li>e.g. :  CALL SQRT2REG(33.5,4) ;</li>
 </ul>
 </li>
-<li><strong>rand2reg</strong> --&gt; random to register
+<li><p><strong>rand2reg</strong> --&gt; random to register</p>
 <ul>
 <li>e.g. :  CALL rand2reg(33.5,100,4,45) ;</li>
 <li>check subfolder for info</li>
 </ul>
 </li>
-<li><strong>ping2reg</strong> --&gt; ping a host/IP and write result to reg
+<li><p><strong>ping2reg</strong> --&gt; ping a host/IP and write result to reg</p>
 <ul>
 <li>e.g. :  CALL ping2reg('192.168.1.1',1) ;</li>
 <li>needed option: User Socket Msg (R648)
@@ -464,15 +464,22 @@ xref {
 <li>Result value 0 : no successfull ping</li>
 </ul>
 </li>
-<li><strong>ord2reg</strong> --&gt; numeric ASCII code from given char to register
+<li><p><strong>ord2reg</strong> --&gt; numeric ASCII code from given char to register</p>
 <ul>
 <li>e.g. :  CALL ord2reg('ABCDE123,2,1) ;</li>
 <li>will write 66 to register 1, because second(2) Char of string is 'B'</li>
 </ul>
 </li>
+<li><p><strong>caller2sr / parent2sr</strong>--&gt; writes the parent program name to given <strong>StringRegister</strong></p>
+<ul>
+<li>e.g. :  CALL caller2sr(1) ;</li>
+<li>e.g. :  CALL parent2sr(10001) ;</li>
+<li>will write the program name of calling tp program  to register 1</li>
 </ul>
 <h3 id="local-register">Local Register</h3>
-<p>R30iBPlus V940 progs support writing to local register of calling TP prog.</p>
+</li>
+</ul>
+<p>R30iBPlus V940 progs support writing to <strong>local register</strong> of calling TP prog.</p>
 <p><em>Local regs are setup in <strong>detail</strong> screen of selected tp prog</em></p>
 <pre><code>:  CALL ord2reg('ABCDE123,2,10001) ;
 :  IF R[10001].....                ; 

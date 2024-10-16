@@ -4,7 +4,7 @@
 
 # TP-Tools
 
- Die neueste *Release* finden Sie hier:
+ Das neueste *Release* finden Sie hier:
 
  https://github.com/Backdate/TP-Tools/releases
 
@@ -106,7 +106,6 @@ Der Arg-Wizard ist implementiert.
 ---
 
 
-
 ## 2REG
 Ein Ordner mit einfachen "Nur-Ein-Befehl"-Programmen.
 Das Ergebnis wird in das angegebene Register geschrieben
@@ -122,7 +121,7 @@ Das Ergebnis wird in das angegebene Register geschrieben
 - **rand2reg** --> Zufallswert in Register
   - z.B. : CALL rand2reg(33.5,100,4,45) ;
   - siehe Unterordner für Infos
-- **ping2reg** --> ping einen Host/IP und schreibe das Ergebnis in Register
+- **ping2reg** --> pinge einen Host/IP an und schreibe das Ergebnis in Register
   - z.B. : CALL ping2reg('192.168.1.1',1) ;
   - benötigte Option: User Socket Msg (R648)
     - Fehler INTP-320 Undefined builtin if not installed
@@ -131,7 +130,9 @@ Das Ergebnis wird in das angegebene Register geschrieben
 - **ord2reg** --> numerischer ASCII-Code aus gegebenem Buchstaben in Register
   - z.B. : CALL ord2reg('ABCDE123,2,1) ;
   - schreibt 66 in Register 1, da der zweite(2) Buchstabe des Strings 'B' ist
-
+- **caller2sr / parent2sr**--> schreibt den Namen des **aufrufenden** Programms in ein  **StringRegister**
+  - e.g. :  CALL caller2sr(1) ;
+  - e.g. :  CALL parent2sr(10001) ;
 
 
 [2REG](2reg/readme.md)
