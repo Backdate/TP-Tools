@@ -1,6 +1,8 @@
 ![TP Tools](./assets/tp-tools.png)
 
-**Please inform us of any oddities with the texts. We are not native english speakers** 
+**Support for the R-50iA is planned, and tests are already underway.**
+
+**If the tools need to be adapted quickly, just send us an e-mail. We currently have no access to a (real) robot with  R-50iA** 
 
 ---
 
