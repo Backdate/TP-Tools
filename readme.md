@@ -1,8 +1,7 @@
 ![TP Tools](./assets/tp-tools.png)
 
-**Support for R-50iA is planned, and tests are already underway.**
-
-**If the tools need to be adapted quickly, just send us an email. (We currently have no access to a (real) robot with  R-50iA)** 
+**Support for R-50iA ! documentation is soon available.**
+ **There are some minor changes for R-50iA, because Sysvars are not accessible anymore**
 
 ---
 
@@ -44,6 +43,7 @@ A license file does NOT have to be copied to the robot controller.
 - R-30iB (V8.10)
 - R-30iBPlus (V9.10)
 - R-30iBPlus/CRX (V9.40/42)
+- R-50iA (V10.10)
 
 If there is no corresponding subfolder, the version is (currently) not available.
 
