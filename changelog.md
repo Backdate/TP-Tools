@@ -2,7 +2,6 @@
 # Changelog
 ## Changes
 - *2025/04/24* : add: R-50iA target (V10.10)
-- *2024/10/16* : add: caller2sr/parent2sr : write the progname of calling tp to SR
 - *2024/10/10* : add: tp_write TPERR_CONSOLE command
 - *2024/10/10* : solved: tp_write trim problem 
 - *2024/08/21* : tp_write V810/V910 compiling/linking problems
