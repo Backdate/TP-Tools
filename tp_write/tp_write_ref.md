@@ -61,7 +61,8 @@ Some commands require several parameters or arguments.
     - needs extra argument: '0'
       - otherwise parser is not executed
   - TimeStamp  = '%FAST_CLOCK'
-    - value is *[SYSTEM]*$FAST_CLOCK 
+    - **NOT available on R-50iA / V10.10**
+    - value is *[SYSTEM]*$FAST_CLOCK
     - needs extra argument: '0'
       - otherwise parser is not executed
 

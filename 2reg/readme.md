@@ -25,14 +25,10 @@ Simple Programs with one dedicated function.
 - **ord2reg** --> numeric ASCII code from given char to register
   - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
   -  will write 66 to register 1, because second(2) Char of string is 'B'
-- **caller2sr / parent2sr**--> writes the parent program name to given **StringRegister**
-  - e.g. :  CALL caller2sr(1) ;
-  - e.g. :  CALL parent2sr(10001) ;
-  -  will write the program name of calling tp program  to register 1
   
   ### Local Register
 
-R30iBPlus V940 progs support writing to **local register** of calling TP prog.
+*R30iBPlus V940 / R-50iA V1010* progs support writing to **local register** of calling TP prog.
 
 *Local regs are setup in **detail** screen of selected tp prog*
 

@@ -442,6 +442,7 @@ RANDOM.INCREMENT = 13849;
 RANDOM.MODULUS = 65536;
 RANDOM.MULTIPLIER = 25173;
 RANDOM.seed=$FAST_CLOCK;
+-- R-50iA :GET_TIME ( RANDOM.seed)
 ..
 
 ROUTINE RAND(SEED:INTEGER;MULTIPLIER:INTEGER;
@@ -452,6 +453,7 @@ BEGIN
 END RAND
 </code></pre>
 <p>At (first time) startup, SEED gets initialized by '$FAST_CLOCK'. (only if &quot;isINIT&quot; is <em>UNINITIALIZED</em>; e.g. cold start)</p>
+<p><strong>On R-50iA controller the Integer-Value of GET_TIME is used instead.</strong></p>
 <h3 id="return-value-type">Return Value Type</h3>
 <p>The <strong>MIN value type</strong> sets the type of output register!</p>
 <ul>
@@ -479,6 +481,7 @@ END RAND
 :$[RAND2REG]RANDOM.MULTIPLIER = ...;
 :$[RAND2REG]RANDOM.seed=$FAST_CLOCK;
 </code></pre>
+<p><strong>Sys-Vars are not accessible on R-50iA</strong></p>
 <h3 id="resources">Resources</h3>
 <p><a href="https://ntci.on.ca/compsci/tik/ch8/8_4.htm">https://ntci.on.ca/compsci/tik/ch8/8_4.htm</a></p>
 <p><a href="https://coding-engineer.com/2019/10/28/random-number-generator-python/">https://coding-engineer.com/2019/10/28/random-number-generator-python/</a></p>

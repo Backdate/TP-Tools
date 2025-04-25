@@ -61,6 +61,8 @@ Some commands require several parameters or arguments.
 ### LOAD_VIEW (13)
 ```:TP_VIEW('LOAD_VIEW',[idx]); ```
 
+**favorite view functions are not available on R50iA** 
+
 **Forces the user (favorite) view by given index**
 
     Default : 1
@@ -83,6 +85,8 @@ Some commands require several parameters or arguments.
 ```:TP_VIEW('CLEAR_VIEW',[idx]); ```
 
 **Clears the user view with given index**
+
+**favorite view functions are not available on R50iA** 
 
     Default : 1
 

@@ -469,17 +469,10 @@ xref {
 <li>e.g. :  CALL ord2reg('ABCDE123,2,1) ;</li>
 <li>will write 66 to register 1, because second(2) Char of string is 'B'</li>
 </ul>
-</li>
-<li><p><strong>caller2sr / parent2sr</strong>--&gt; writes the parent program name to given <strong>StringRegister</strong></p>
-<ul>
-<li>e.g. :  CALL caller2sr(1) ;</li>
-<li>e.g. :  CALL parent2sr(10001) ;</li>
-<li>will write the program name of calling tp program  to register 1</li>
-</ul>
 <h3 id="local-register">Local Register</h3>
 </li>
 </ul>
-<p>R30iBPlus V940 progs support writing to <strong>local register</strong> of calling TP prog.</p>
+<p><em>R30iBPlus V940 / R-50iA V1010</em> progs support writing to <strong>local register</strong> of calling TP prog.</p>
 <p><em>Local regs are setup in <strong>detail</strong> screen of selected tp prog</em></p>
 <pre><code>:  CALL ord2reg('ABCDE123,2,10001) ;
 :  IF R[10001].....                ; 

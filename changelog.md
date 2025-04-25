@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *2025/04/25* : update docs, progs and bugfix apsh-err
 - *2025/04/24* : add: R-50iA target (V10.10)
 - *2024/10/10* : add: tp_write TPERR_CONSOLE command
 - *2024/10/10* : solved: tp_write trim problem 
@@ -17,10 +18,11 @@
 - ... older stuff
 
 ### Next steps (planned)
--  ~~prepare translations~~
+-  check DataIDs for favorite views
+    - (R-50iA  tp_view is missing some features)
 -  docs bugfixing
 
-### Planned features 1.2 (Q4 24)
+### Planned features  (Q4 2025)
 - just additions, no breaking changes
 - maybe add TP_SHOW ; easy Dialogs and HMI
 - CRX Plugin with some ideas of TP-Tools. 

@@ -37,10 +37,12 @@ Explains all commands and fuctions of this Software.
 
 **Info:** Upload "tp_view_ref.htm" to the controller to get help at your fingertips.
 
-## ANIMATIONS
 
-Animation shows how to create a user favorite view. Afterwards this view is restored.
+
+This Animation shows how to create a user favorite view. Afterwards this view is restored.
 ![user defined view](./assets/TP_VIEW_Example1.gif)
+
+**favorite view functions are not available on R50iA** 
 
 
 **THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND**

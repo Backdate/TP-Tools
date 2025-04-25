@@ -27,6 +27,7 @@ At the bottom the program uses this snippet für generating the pseudo random nu
     RANDOM.MODULUS = 65536;
     RANDOM.MULTIPLIER = 25173;
     RANDOM.seed=$FAST_CLOCK;
+    -- R-50iA :GET_TIME ( RANDOM.seed)
     ..
 
     ROUTINE RAND(SEED:INTEGER;MULTIPLIER:INTEGER;
@@ -37,6 +38,8 @@ At the bottom the program uses this snippet für generating the pseudo random nu
     END RAND
 
 At (first time) startup, SEED gets initialized by '$FAST_CLOCK'. (only if "isINIT" is *UNINITIALIZED*; e.g. cold start)
+
+**On R-50iA controller the Integer-Value of GET_TIME is used instead.**
 
 
 ### Return Value Type
@@ -67,6 +70,8 @@ Just change the karel-vars to your needs.
     :$[RAND2REG]RANDOM.INCREMENT =...;
     :$[RAND2REG]RANDOM.MULTIPLIER = ...;
     :$[RAND2REG]RANDOM.seed=$FAST_CLOCK;
+
+**Sys-Vars are not accessible on R-50iA**
 
 
 ### Resources 
