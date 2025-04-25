@@ -1,6 +1,7 @@
 ![TP Tools](./assets/tp-tools.png)
 
-**Support for R-50iA ! documentation is soon available.**
+**Support for R-50iA !**
+
  **There are some minor changes for R-50iA, because Sysvars are not accessible anymore**
 
 ---
