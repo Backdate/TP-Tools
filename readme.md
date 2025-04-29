@@ -4,6 +4,9 @@
 
  **There are some minor changes for R-50iA, because Sysvars are not accessible anymore**
 
+**As we currently have no access to a physical R50iA controller, we are grateful for any feedback!**
+
+
 ---
 
 [click here for german readme](readme.de.md)
@@ -37,10 +40,11 @@ A license file does NOT have to be copied to the robot controller.
 
 **Thereby nothing stands in the way of commercial use.**
 
+**Problems with this license inside your company? Just ask!**
+
 ---
 ### Controller and Version
 
-- R-30iA (V7.50)
 - R-30iB (V8.10)
 - R-30iBPlus (V9.10)
 - R-30iBPlus/CRX (V9.40/42)
@@ -136,10 +140,7 @@ Result is written to specified register
 - **ord2reg** --> numeric ASCII code from given CHAR to register
   - e.g. :  CALL ord2reg('ABCDE123,2,1) ;
   -  will write 66 to register 1, because second(2) Char of string is 'B'
-- **caller2sr / parent2sr** --> writes the parent program name to given **StringRegister**
-  - e.g. :  CALL caller2sr(1) ;
-  - e.g. :  CALL parent2sr(10001) ;
-  -  will write the program name of calling tp program  to register 1
+
 
 [2REG](2reg/readme.md)
 
