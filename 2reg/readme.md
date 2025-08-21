@@ -73,7 +73,7 @@ Simple programs with one dedicated function.
 
 ## String Register
 
-- ~~**conf2sr**~~ : writes config data of given Posreg to Stringreg
+- **conf2sr** : set config dat of given Posreg to Stringreg (as string)
 
       : CALL conf2sr(1,3) ;
 
