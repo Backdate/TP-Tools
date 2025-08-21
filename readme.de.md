@@ -130,9 +130,7 @@ Das Ergebnis wird in das angegebene Register geschrieben
 - **ord2reg** --> numerischer ASCII-Code aus gegebenem Buchstaben in Register
   - z.B. : CALL ord2reg('ABCDE123,2,1) ;
   - schreibt 66 in Register 1, da der zweite(2) Buchstabe des Strings 'B' ist
-- **caller2sr / parent2sr**--> schreibt den Namen des **aufrufenden** Programms in ein  **StringRegister**
-  - e.g. :  CALL caller2sr(1) ;
-  - e.g. :  CALL parent2sr(10001) ;
+  - ... und mehr...
 
 
 [2REG](2reg/readme.md)

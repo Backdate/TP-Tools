@@ -1,6 +1,7 @@
 
 # Changelog
 ## Changes
+- *2025/08/21* : update docs, add conf2pr
 - *2025/04/25* : update docs, progs and bugfix apsh-err
 - *2025/04/24* : add: R-50iA target (V10.10)
 - *2024/10/10* : add: tp_write TPERR_CONSOLE command
