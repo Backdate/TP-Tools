@@ -2,14 +2,522 @@
 <html lang="en">
 <head>
     
+    <title>TP WRITE Command Reference</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+/*!
+ */
 
+</style>
+    <style>
+body {    color: #24292e;
+    background: white;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI",Helvetica,Arial,sans-serif,"Segoe UI Emoji","Apple Color Emoji";
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+    body::-webkit-scrollbar {
+        width: 0.6em;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 0.2em;
+    }
+
+strong, b {
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6, .byline, .content-title {
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0em;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    display: block;
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.05em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+a, a:visited {
+    text-decoration: none;
+    color: steelblue;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+p {
+    margin: 0.5rem 0 1rem;
+}
+video {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.youtube {
+    width: 720px;
+    height: 400px;
+    max-width: 100%;
+}
+
+
+code {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    color: #333;
+    background: #f2f2f2;
+    font-size: 0.85em;
+}
+
+pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-weight: normal;
+    font-size: 85%;
+    line-height: 1.45;
+    margin: 7px 0;
+    padding: 0;
+    max-width: 98%;
+    border: none;
+    overflow: auto;
+    border-radius: 3px;
+    white-space: pre; /* pre-line if you want to wrap*/
+    background: #f2f2f2f2;
+}
+
+    pre > code {
+        white-space: pre;
+        padding: 0.8em !important;
+        display: block;
+        background: transparent;
+        font-weight: normal;
+        white-space: pre; /* pre-line if you want to wrap*/
+    }
+
+        pre > code::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background: #bbb;
+        }
+
+        pre > code::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+table {
+    width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 15px 0;
+    border-color: gray;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody > tr:nth-child(even) {
+    background: #eee;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul > li > ul > li > ul > li {
+    list-style: disc;
+}
+
+ul > li > ul > li {
+    list-style: circle;
+}
+
+.task-list-item {
+    list-style: none;
+    margin-left: -2em;
+}
+/* definition lists can be toggled*/
+dt {
+    font-size: 1.08em;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 0.5em;
+    cursor: pointer;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.2em 1em;
+    display: none;
+}
+
+blockquote {
+    color: #6a737d;
+    font-size: 1em;
+    border-left: 4px #ddd solid;
+    padding: 15px 20px;
+    margin: 14px 2px;
+}
+
+    blockquote *:first-child {
+        margin-top: 0;
+    }
+
+    blockquote *:last-child {
+        margin-bottom: 0;
+    }
+
+hr {
+    margin: 12px 0;
+}
+
+.figure .caption, figure figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0;
+}
+/* hidden display, but still part of document flow */
+.hidden {
+    display: none;
+}
+
+.hidden-nowidth {
+    width: 0;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.line-highlight {
+    background: #dcefff !important;
+}
+
+p.line-highlight, h1.line-highlight, h2.line-highlight, h3.line-highlight, h4.line-highlight {
+    border-radius: 4px;
+    margin-left: -0.1em;
+    margin-right: -0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+#MainContent {
+    margin: 0 auto;
+    padding: 0.2em 1.4em 0.2em 1.7em;
+    max-width: 980px;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+}
+@media(max-width: 980px) {
+    #MainContent {
+        border: none;
+        padding: 0.2em 0.8em 0.2em 1em;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+        color: white;
+    }
+}
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+    .CAUTION, .IMPORTANT, .INFO, .INFORMATION, .ERROR, .TIP, .NOTE, .WARNING, .DANGER {
+    padding: 0.1px 20px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.CAUTION, .ERROR, .DANGER {
+    border-left: 4px solid #cf222e;
+}
+
+.CAUTION > h5, .ERROR > h5, .DANGER > h5 {
+    color: #cf222e;
+}
+
+.CAUTION h5:before, .ERROR h5:before, .DANGER h5:before {
+    content: "\f06a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.IMPORTANT {
+    border-left: 4px solid #8250df;
+}
+
+.IMPORTANT > h5 {
+    color: #8250df
+}
+
+.IMPORTANT h5:before {
+    content: "\f4a5";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.WARNING {
+    border-left: 4px solid #bf8700;
+}
+
+.WARNING > h5 {
+    color: #9a6700;
+}
+
+.WARNING h5:before {
+    content: "\f071";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.TIP {
+    border-left: 4px solid #1a7f37;
+}
+
+.TIP > h5 {
+    color: #1a7f37;
+}
+
+.TIP h5:before {
+    content: "\f0eb";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.NOTE {
+    border-left: 4px solid #0969da;
+}
+
+.NOTE > h5 {
+    color: #0969da;
+}
+
+.NOTE h5:before {
+    content: "\f05a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.INFO h5, .INFORMATION h5 {
+    color: #555;
+}
+
+.INFO, .INFORMATION {
+    border-left: 4px solid #999;
+}
+
+.INFO h5:before, .INFORMATION h5:before {
+    content: "\f05a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+xref {
+    display: block;
+}
+
+/* light colored code scheme */
+.code-badge {
+    background: #e5e5e5 !important;
+    color: #222 !important;
+    opacity: 0.6 !important;
+}
+
+    .code-badge.active {
+        opacity: .85 !important;
+    }
+
+    .code-badge:hover {
+        opacity: .95 !important;
+        background: #eee;
+    }
+
+.code-badge-language {
+    color: steelblue !important;
+}
+
+
+@media(min-width: 1080px) {
+body {    }
+}
+
+@media print {
+body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system, BlinkMacSystemFont,"Segoe UI", Helvetica, Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        height: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: normal;
+        word-wrap: normal;
+    }
+
+        pre > code {
+            white-space: pre-wrap;
+            padding: 1em !important;
+            /* highlight js overrides for wkhtmltopdf - match to theme */
+            background: #f6f6f6;
+            color: #333333;
+        }
+
+    /* keep paragraphs together */
+    p, li, ul, code, pre {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* keep headers and content together */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+    .code-badge-copy-icon {
+        display: none;
+    }
+}
+
+</style>
+
+    <style>
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: #f6f6f6;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #6a737d;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #d73a49;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #6f42c1;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+</style>
     
 </head>
 <body>
+<div id="MainContent">
     <h1 id="tp-write-command-reference">TP WRITE Command Reference</h1>
 <p>TP_WRITE can be used to write single-line (dynamic) messages to various &quot;screens&quot;.</p>
 <p>Among others, the following &quot;targets&quot; are available for selection:</p>
@@ -24,9 +532,18 @@
 <p><em>In most cases the string length, of the <strong>str2write</strong> is truncated by <strong>system</strong> at length of 40.</em></p>
 <p>The shrinked version(<em>tp_write_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
 <ul>
-<li><code>Teach Pendant  : TP_WRITE('HELP'); </code></li>
-<li><code>web browser    : _hostname_/karel/tp_write</code></li>
-<li><code>FTP upload     : tp_write_ref.htm --&gt; FR:TP_WRITE_ref.htm  </code></li>
+<li>
+<pre><code>Teach Pendant  : TP_WRITE('HELP');     
+</code></pre>
+</li>
+<li>
+<pre><code>web browser    : _hostname_/karel/tp_write    
+</code></pre>
+</li>
+<li>
+<pre><code>FTP upload     : tp_write_ref.htm --&gt; FR:TP_WRITE_ref.htm      
+</code></pre>
+</li>
 </ul>
 <h2 id="commands">Commands</h2>
 <p><em>TP_WRITE</em> uses command strings to execute given task.</p>
@@ -50,12 +567,12 @@
 <p>All (dynamic) strings will be parsed <strong>only</strong> if there is an extra/additional argument!</p>
 <p>'String parser' searches for special &quot;string&quot;:</p>
 <ul>
-<li>Register Value string  = '%R'
+<li><p>Register Value string  = '%R'</p>
 <ul>
 <li>StringRegister Value string   = '%SR'</li>
 </ul>
 </li>
-<li>Time  string  = '%TIME'
+<li><p>Time  string  = '%TIME'</p>
 <ul>
 <li>needs extra argument: '0'
 <ul>
@@ -64,7 +581,7 @@
 </li>
 </ul>
 </li>
-<li>TimeStamp  = '%FAST_CLOCK'
+<li><p>TimeStamp  = '%FAST_CLOCK'</p>
 <ul>
 <li><strong>NOT available on R-50iA / V10.10</strong></li>
 <li>value is <em>[SYSTEM]</em>$FAST_CLOCK</li>
@@ -74,52 +591,65 @@
 </ul>
 </li>
 </ul>
+<p>:CALL TP_WRITE('USER','Value of R[1]is %R',1);</p>
+<p>:CALL TP_WRITE('USER','Time now: %TIME',1);</p>
 </li>
 </ul>
-<p><code>:CALL TP_WRITE('USER','Value of R[1]is %R',1);</code></p>
-<p><code>:CALL TP_WRITE('USER','Time now: %TIME',1);</code></p>
 <hr>
 <h3 id="help-11">HELP (11)</h3>
-<p><code>: CALL TP_WRITE('HELP'); </code> <strong>or</strong>
-<code>: CALL TP_WRITE(11); </code></p>
+<pre><code>: CALL TP_WRITE('HELP');
+
+: CALL TP_WRITE(11);     
+</code></pre>
 <p><strong>Shows (web)help of this program</strong></p>
 <hr>
 <h3 id="user-21">USER (21)</h3>
-<p><code>: CALL TP_WRITE('USER','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('USER','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to UserScreen</strong></p>
 <hr>
 <h3 id="tpdisplay-21">TPDISPLAY (21)</h3>
-<p><code>: CALL TP_WRITE('TPDISPLAY','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPDISPLAY','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to UserScreen</strong></p>
 <hr>
 <h3 id="tperror-22">TPERROR (22)</h3>
-<p><code>: CALL TP_WRITE('TPERROR','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPERROR','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to TPERROR area</strong></p>
 <hr>
 <h3 id="tpprompt-23">TPPROMPT (23)</h3>
-<p><code>: CALL TP_WRITE('TPPROMPT','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPPROMPT','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to TPPROMPT area</strong></p>
 <hr>
 <h3 id="tpfunc-24">TPFUNC (24)</h3>
-<p><code>: CALL TP_WRITE('TPFUNC','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPFUNC','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to TPFUNC (function keys area)</strong></p>
 <hr>
 <h3 id="tpstatus-25">TPSTATUS (25)</h3>
-<p><code>: CALL TP_WRITE('TPSTATUS','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPSTATUS','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to TPSTATUS (only if active)</strong></p>
 <hr>
 <h3 id="sr-26">SR (26)</h3>
-<p><code>: CALL TP_WRITE('SR',idx,'Hello User'); </code></p>
-<p><code>:  CALL TP_WRITE(&quot;SR&quot;=26,&quot;ID&quot;=1,&quot;Str2Write&quot;='Reg1 = %R',1) ; </code></p>
+<pre><code>: CALL TP_WRITE('SR',idx,'Hello User');     
+
+ :  CALL TP_WRITE(&quot;SR&quot;=26,&quot;ID&quot;=1,&quot;Str2Write&quot;='Reg1 = %R',1) ;     
+</code></pre>
 <p><strong>Writes a (dynamic)string to SR with given String and index</strong></p>
 <hr>
 <h3 id="console-27">CONSOLE (27)</h3>
-<p><code>: CALL TP_WRITE('CONSOLE','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('CONSOLE','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to CONSOLE</strong></p>
 <hr>
 <h3 id="post_err-28">POST_ERR (28)</h3>
-<p><code>: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); </code></p>
-<p><code>:  CALL TP_WRITE(&quot;POST_ERR&quot;=28,&quot;INFO&quot;=0,&quot;Sys-Err_Num&quot;=0) ;</code></p>
+<pre><code>: CALL TP_WRITE('POST_ERR',SEV,ERRCODE);     
+
+:  CALL TP_WRITE(&quot;POST_ERR&quot;=28,&quot;INFO&quot;=0,&quot;Sys-Err_Num&quot;=0) ;    
+</code></pre>
 <ul>
 <li>SEV / Severity :
 <ul>
@@ -147,8 +677,10 @@
 <p><strong>Posts an error with given ErrorCode and severity</strong></p>
 <hr>
 <h3 id="apsh_err-29">APSH_ERR (29)</h3>
-<p><code>: CALL TP_WRITE('APSH_ERR',SEV,'Hello User'); </code></p>
-<p><code>:  CALL TP_WRITE(&quot;APSH_ERR&quot;=29,&quot;INFO&quot;=0,&quot;Str2Write&quot;='...') ;</code></p>
+<pre><code>: CALL TP_WRITE('APSH_ERR',SEV,'Hello User');     
+
+:  CALL TP_WRITE(&quot;APSH_ERR&quot;=29,&quot;INFO&quot;=0,&quot;Str2Write&quot;='...') ;    
+</code></pre>
 <ul>
 <li><p>Severity :</p>
 <ul>
@@ -163,35 +695,43 @@
 <p><strong>Posts an APSH_ERR with given String and severity</strong></p>
 <hr>
 <h3 id="tperr_cons-31">TPERR_CONS (31)</h3>
-<p><code>: CALL TP_WRITE('TPERR_CONS','Hello User'); </code></p>
+<pre><code>: CALL TP_WRITE('TPERR_CONS','Hello User');     
+</code></pre>
 <p><strong>Writes a (dynamic)string to TPERROR AND Console</strong></p>
 <hr>
 <h3 id="clear-commands">CLEAR commands</h3>
-<p><code>: CALL TP_WRITE('CLEAR.xxxx'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.xxxx');     
+</code></pre>
 <p><strong>Erases all chars from corresponding sreen/area</strong></p>
 <hr>
 <h3 id="cleartpdisplay-61">CLEAR.TPDISPLAY (61)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.TPDISPLAY'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.TPDISPLAY');     
+</code></pre>
 <p><strong>erases all chars from TPDISPLAY/User screen</strong></p>
 <hr>
 <h3 id="cleartperror-62">CLEAR.TPERROR (62)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.TPERROR'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.TPERROR');     
+</code></pre>
 <p><strong>erases all chars from error area</strong></p>
 <hr>
 <h3 id="cleartpprompt-63">CLEAR.TPPROMPT (63)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.TPPROMPT'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.TPPROMPT');     
+</code></pre>
 <p><strong>erases all chars from prompt area</strong></p>
 <hr>
 <h3 id="cleartpfunc-64">CLEAR.TPFUNC (64)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.TPFUNC'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.TPFUNC');     
+</code></pre>
 <p><strong>erases all chars from function key area</strong></p>
 <hr>
 <h3 id="cleartpstatus-65">CLEAR.TPSTATUS (65)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.TPSTATUS'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.TPSTATUS');     
+</code></pre>
 <p><strong>erases all chars from status area ; only if status is active</strong></p>
 <hr>
 <h3 id="clearuser-61">CLEAR.USER (61)</h3>
-<p><code>: CALL TP_WRITE('CLEAR.USER'); </code></p>
+<pre><code>: CALL TP_WRITE('CLEAR.USER');     
+</code></pre>
 <p><strong>erases all chars from TPDISPLAY/User screen</strong></p>
 <hr>
 <h2 id="force-commands">FORCE Commands</h2>
@@ -202,7 +742,8 @@
 </ul>
 <hr>
 <h3 id="forceuser-51">FORCE.USER (51)</h3>
-<p><code>: CALL TP_WRITE('FORCE.USER'); </code></p>
+<pre><code>: CALL TP_WRITE('FORCE.USER');     
+</code></pre>
 <p><strong>Forces SingleUserScreen</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
@@ -210,7 +751,8 @@
 </ul>
 <hr>
 <h3 id="forceuserwide-52">FORCE.USERWIDE (52)</h3>
-<p><code>: CALL TP_WRITE('FORCE.USERWIDE'); </code></p>
+<pre><code>: CALL TP_WRITE('FORCE.USERWIDE');     
+</code></pre>
 <p><strong>Forces SingleUserScreen inside wide mode</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
@@ -226,5 +768,6 @@
 <hr>
 <p>(c) Backdate Software GmbH</p>
 
+</div>
 </body>
 </html>

@@ -22,11 +22,11 @@ Call the prog from web browser for best user experience.
 
 This is a powerfull program.
 
-Keep in mind that the attribut 'invisible' will be permanetly changed at TP programs!
+Keep in mind that the attribut **'invisible'** will be permanetly changed at TP programs!
 
 This might refuse programmers and or users!
 
-Make a 'backup list' of your progs with this tool first!
+Make a 'backup list' of your progs with this tool first! (please check the animation)
 
 ---
 ---

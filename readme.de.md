@@ -130,7 +130,7 @@ Das Ergebnis wird in das angegebene Register geschrieben
 - **ord2reg** --> numerischer ASCII-Code aus gegebenem Buchstaben in Register
   - z.B. : CALL ord2reg('ABCDE123,2,1) ;
   - schreibt 66 in Register 1, da der zweite(2) Buchstabe des Strings 'B' ist
-  - ... und mehr...
+- ... und mehr
 
 
 [2REG](2reg/readme.md)

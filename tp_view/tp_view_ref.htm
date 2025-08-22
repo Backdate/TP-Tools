@@ -2,14 +2,522 @@
 <html lang="en">
 <head>
     
+    <title>TP VIEW Command Reference</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+/*!
+ */
 
+</style>
+    <style>
+body {    color: #24292e;
+    background: white;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI",Helvetica,Arial,sans-serif,"Segoe UI Emoji","Apple Color Emoji";
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+    body::-webkit-scrollbar {
+        width: 0.6em;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 0.2em;
+    }
+
+strong, b {
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6, .byline, .content-title {
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0em;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    display: block;
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.05em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+a, a:visited {
+    text-decoration: none;
+    color: steelblue;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+p {
+    margin: 0.5rem 0 1rem;
+}
+video {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.youtube {
+    width: 720px;
+    height: 400px;
+    max-width: 100%;
+}
+
+
+code {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    color: #333;
+    background: #f2f2f2;
+    font-size: 0.85em;
+}
+
+pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-weight: normal;
+    font-size: 85%;
+    line-height: 1.45;
+    margin: 7px 0;
+    padding: 0;
+    max-width: 98%;
+    border: none;
+    overflow: auto;
+    border-radius: 3px;
+    white-space: pre; /* pre-line if you want to wrap*/
+    background: #f2f2f2f2;
+}
+
+    pre > code {
+        white-space: pre;
+        padding: 0.8em !important;
+        display: block;
+        background: transparent;
+        font-weight: normal;
+        white-space: pre; /* pre-line if you want to wrap*/
+    }
+
+        pre > code::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background: #bbb;
+        }
+
+        pre > code::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+table {
+    width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 15px 0;
+    border-color: gray;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody > tr:nth-child(even) {
+    background: #eee;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul > li > ul > li > ul > li {
+    list-style: disc;
+}
+
+ul > li > ul > li {
+    list-style: circle;
+}
+
+.task-list-item {
+    list-style: none;
+    margin-left: -2em;
+}
+/* definition lists can be toggled*/
+dt {
+    font-size: 1.08em;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 0.5em;
+    cursor: pointer;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.2em 1em;
+    display: none;
+}
+
+blockquote {
+    color: #6a737d;
+    font-size: 1em;
+    border-left: 4px #ddd solid;
+    padding: 15px 20px;
+    margin: 14px 2px;
+}
+
+    blockquote *:first-child {
+        margin-top: 0;
+    }
+
+    blockquote *:last-child {
+        margin-bottom: 0;
+    }
+
+hr {
+    margin: 12px 0;
+}
+
+.figure .caption, figure figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0;
+}
+/* hidden display, but still part of document flow */
+.hidden {
+    display: none;
+}
+
+.hidden-nowidth {
+    width: 0;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.line-highlight {
+    background: #dcefff !important;
+}
+
+p.line-highlight, h1.line-highlight, h2.line-highlight, h3.line-highlight, h4.line-highlight {
+    border-radius: 4px;
+    margin-left: -0.1em;
+    margin-right: -0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+#MainContent {
+    margin: 0 auto;
+    padding: 0.2em 1.4em 0.2em 1.7em;
+    max-width: 980px;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+}
+@media(max-width: 980px) {
+    #MainContent {
+        border: none;
+        padding: 0.2em 0.8em 0.2em 1em;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+        color: white;
+    }
+}
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+    .CAUTION, .IMPORTANT, .INFO, .INFORMATION, .ERROR, .TIP, .NOTE, .WARNING, .DANGER {
+    padding: 0.1px 20px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.CAUTION, .ERROR, .DANGER {
+    border-left: 4px solid #cf222e;
+}
+
+.CAUTION > h5, .ERROR > h5, .DANGER > h5 {
+    color: #cf222e;
+}
+
+.CAUTION h5:before, .ERROR h5:before, .DANGER h5:before {
+    content: "\f06a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.IMPORTANT {
+    border-left: 4px solid #8250df;
+}
+
+.IMPORTANT > h5 {
+    color: #8250df
+}
+
+.IMPORTANT h5:before {
+    content: "\f4a5";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.WARNING {
+    border-left: 4px solid #bf8700;
+}
+
+.WARNING > h5 {
+    color: #9a6700;
+}
+
+.WARNING h5:before {
+    content: "\f071";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.TIP {
+    border-left: 4px solid #1a7f37;
+}
+
+.TIP > h5 {
+    color: #1a7f37;
+}
+
+.TIP h5:before {
+    content: "\f0eb";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.NOTE {
+    border-left: 4px solid #0969da;
+}
+
+.NOTE > h5 {
+    color: #0969da;
+}
+
+.NOTE h5:before {
+    content: "\f05a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+.INFO h5, .INFORMATION h5 {
+    color: #555;
+}
+
+.INFO, .INFORMATION {
+    border-left: 4px solid #999;
+}
+
+.INFO h5:before, .INFORMATION h5:before {
+    content: "\f05a";
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+xref {
+    display: block;
+}
+
+/* light colored code scheme */
+.code-badge {
+    background: #e5e5e5 !important;
+    color: #222 !important;
+    opacity: 0.6 !important;
+}
+
+    .code-badge.active {
+        opacity: .85 !important;
+    }
+
+    .code-badge:hover {
+        opacity: .95 !important;
+        background: #eee;
+    }
+
+.code-badge-language {
+    color: steelblue !important;
+}
+
+
+@media(min-width: 1080px) {
+body {    }
+}
+
+@media print {
+body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system, BlinkMacSystemFont,"Segoe UI", Helvetica, Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        height: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: normal;
+        word-wrap: normal;
+    }
+
+        pre > code {
+            white-space: pre-wrap;
+            padding: 1em !important;
+            /* highlight js overrides for wkhtmltopdf - match to theme */
+            background: #f6f6f6;
+            color: #333333;
+        }
+
+    /* keep paragraphs together */
+    p, li, ul, code, pre {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* keep headers and content together */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+    .code-badge-copy-icon {
+        display: none;
+    }
+}
+
+</style>
+
+    <style>
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: #f6f6f6;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #6a737d;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #d73a49;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #6f42c1;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+</style>
     
 </head>
 <body>
+<div id="MainContent">
     <h1 id="tp-view-command-reference">TP VIEW Command Reference</h1>
 <p>Use TP_VIEW to switch/change the iPendant windows/screens .</p>
 <ul>
@@ -20,9 +528,18 @@
 </ul>
 <p>The shrinked version(<em>tp_view_ref.htm</em>) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.</p>
 <ul>
-<li><code>Teach Pendant  : TP_VIEW('HELP'); </code></li>
-<li><code>web browser    : _hostname_/karel/tp_view</code></li>
-<li><code>FTP upload     : tpview_ref.htm --&gt; FR:tpview_ref.htm  </code></li>
+<li>
+<pre><code>Teach Pendant  : TP_VIEW('HELP');     
+</code></pre>
+</li>
+<li>
+<pre><code>web browser    : _hostname_/karel/tp_view    
+</code></pre>
+</li>
+<li>
+<pre><code>FTP upload     : tpview_ref.htm --&gt; FR:tpview_ref.htm      
+</code></pre>
+</li>
 </ul>
 <h2 id="commands">Commands</h2>
 <p><em>TP_VIEW</em> uses command strings to execute given task.</p>
@@ -44,17 +561,20 @@
 </ul>
 <hr>
 <h3 id="help-11">HELP (11)</h3>
-<p><code>:TP_VIEW('HELP'); </code> <strong>or</strong>
-<code>:TP_VIEW(11); </code></p>
+<pre><code>:TP_VIEW('HELP');      **or**
+:TP_VIEW(11);     
+</code></pre>
 <p><strong>Shows (web)help of this program</strong></p>
 <hr>
 <h3 id="restore-12">RESTORE (12)</h3>
-<p><code>:TP_VIEW('RESTORE'); </code></p>
+<pre><code>:TP_VIEW('RESTORE');     
+</code></pre>
 <p><strong>Restores &quot;$UI_RESTORE[1]-sysvar&quot;</strong></p>
 <p><strong>not recommended!</strong></p>
 <hr>
 <h3 id="load_view-13">LOAD_VIEW (13)</h3>
-<p><code>:TP_VIEW('LOAD_VIEW',[idx]); </code></p>
+<pre><code>:TP_VIEW('LOAD_VIEW',[idx]);     
+</code></pre>
 <p><strong>favorite view functions are not available on R50iA</strong></p>
 <p><strong>Forces the user (favorite) view by given index</strong></p>
 <pre><code>Default : 1
@@ -78,14 +598,16 @@
 </ul>
 <hr>
 <h3 id="clear_view-14">CLEAR_VIEW (14)</h3>
-<p><code>:TP_VIEW('CLEAR_VIEW',[idx]); </code></p>
+<pre><code>:TP_VIEW('CLEAR_VIEW',[idx]);     
+</code></pre>
 <p><strong>Clears the user view with given index</strong></p>
 <p><strong>favorite view functions are not available on R50iA</strong></p>
 <pre><code>Default : 1
 </code></pre>
 <hr>
 <h3 id="single_user-15">SINGLE_USER (15)</h3>
-<p><code>:TP_VIEW('SINGLE_USER'); </code></p>
+<pre><code>:TP_VIEW('SINGLE_USER');     
+</code></pre>
 <p><strong>Forces SingleUserScreen</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
@@ -94,7 +616,8 @@
 </ul>
 <hr>
 <h3 id="wide_user-16">WIDE_USER (16)</h3>
-<p><code>:TP_VIEW('WIDE_USER'); </code></p>
+<pre><code>:TP_VIEW('WIDE_USER');     
+</code></pre>
 <p><strong>Forces SingleUserScreen inside wide mode</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
@@ -106,27 +629,33 @@
 <p><strong>Screen commands shows default screen/window combination</strong></p>
 <hr>
 <h3 id="screensingle-31">SCREEN.SINGLE (31)</h3>
-<p><code>:TP_VIEW('SCREEN.SINGLE'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.SINGLE');     
+</code></pre>
 <p><strong>default window inside SingleScreen</strong></p>
 <hr>
 <h3 id="screenwide-32">SCREEN.WIDE (32)</h3>
-<p><code>:TP_VIEW('SCREEN.WIDE'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.WIDE');     
+</code></pre>
 <p><strong>default window inside SingleScreen WIDE</strong></p>
 <hr>
 <h3 id="screendouble-33">SCREEN.DOUBLE (33)</h3>
-<p><code>:TP_VIEW('SCREEN.DOUBLE'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.DOUBLE');     
+</code></pre>
 <p><strong>default window(s) inside DOUBLEScreen</strong></p>
 <hr>
 <h3 id="screentriple-34">SCREEN.TRIPLE (34)</h3>
-<p><code>:TP_VIEW('SCREEN.TRIPLE'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.TRIPLE');     
+</code></pre>
 <p><strong>default window(s) inside TRIPLEScreen</strong></p>
 <hr>
 <h3 id="screentreeprim-35">SCREEN.TREEPRIM (35)</h3>
-<p><code>:TP_VIEW('SCREEN.TREEPRIM'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.TREEPRIM');     
+</code></pre>
 <p><strong>default window(s) inside TreeView and PrimaryScreen</strong></p>
 <hr>
 <h3 id="screenstatprim-36">SCREEN.STATPRIM (36)</h3>
-<p><code>:TP_VIEW('SCREEN.STATPRIM'); </code></p>
+<pre><code>:TP_VIEW('SCREEN.STATPRIM');     
+</code></pre>
 <p><strong>default window(s) inside StatusScreen and PrimaryScreen</strong></p>
 <hr>
 <h2 id="dialog-commands">DIALOG Commands</h2>
@@ -139,7 +668,8 @@
 <p>Check Fanuc iPendant customization doc for XML definition.</p>
 <hr>
 <h3 id="dialogfromfile-41">DIALOG.FROMFILE (41)</h3>
-<p><code>:TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml'); </code></p>
+<pre><code>:TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml');     
+</code></pre>
 <p>Shows a modal dialog. The XML dialog is loaded from file path.</p>
 <p><strong>Read Fanuc iPendant customization of xml file description</strong></p>
 <p>User/Developer has to setup the XML file and FLAGs or VARs for dialog result.
@@ -163,7 +693,8 @@ This command will handle only the [PREV]-key.</p>
 </ul>
 <hr>
 <h3 id="forceuser-51">FORCE.USER (51)</h3>
-<p><code>:TP_VIEW('FORCE.USER'); </code></p>
+<pre><code>:TP_VIEW('FORCE.USER');     
+</code></pre>
 <p><strong>Forces SingleUserScreen</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.SINGLE'</strong>.</li>
@@ -171,7 +702,8 @@ This command will handle only the [PREV]-key.</p>
 </ul>
 <hr>
 <h3 id="forceuserwide-52">FORCE.USERWIDE (52)</h3>
-<p><code>:TP_VIEW('FORCE.USERWIDE'); </code></p>
+<pre><code>:TP_VIEW('FORCE.USERWIDE');     
+</code></pre>
 <p><strong>Forces SingleUserScreen inside wide mode</strong></p>
 <ul>
 <li>Forces <strong>'SCREEN.WIDE'</strong>.</li>
@@ -179,7 +711,8 @@ This command will handle only the [PREV]-key.</p>
 </ul>
 <hr>
 <h3 id="forceview-53">FORCE.VIEW (53)</h3>
-<p><code>:TP_VIEW('FORCE.VIEW',[idx]); </code></p>
+<pre><code>:TP_VIEW('FORCE.VIEW',[idx]);     
+</code></pre>
 <p><strong>Forces the user view by given index</strong></p>
 <p>To add a new  <em>user favorite view</em> use
 <strong>TP-MENU</strong></p>
@@ -197,7 +730,8 @@ This command will handle only the [PREV]-key.</p>
 <p>To clear a <em>user favorite view</em> use <strong>CLEAR_VIEW-command</strong></p>
 <hr>
 <h3 id="forcelink-59">FORCE.LINK (59)</h3>
-<p><code>:TP_VIEW('FORCE.LINK','URL',[string2]..); </code></p>
+<pre><code>:TP_VIEW('FORCE.LINK','URL',[string2]..);     
+</code></pre>
 <p><strong>Forces a valid link by a string (array)</strong></p>
 <ul>
 <li>one or more string arguments are concated to together</li>
@@ -214,5 +748,6 @@ This command will handle only the [PREV]-key.</p>
 <hr>
 <p>(c) Backdate Software GmbH</p>
 
+</div>
 </body>
 </html>

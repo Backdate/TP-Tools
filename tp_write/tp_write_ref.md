@@ -17,9 +17,9 @@ Among others, the following "targets" are available for selection:
 
 The shrinked version(*tp_write_ref.htm*) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.
 
-- ```Teach Pendant  : TP_WRITE('HELP'); ```
-- ```web browser    : _hostname_/karel/tp_write```
-- ```FTP upload     : tp_write_ref.htm --> FR:TP_WRITE_ref.htm  ```
+-     Teach Pendant  : TP_WRITE('HELP');     
+-     web browser    : _hostname_/karel/tp_write    
+-     FTP upload     : tp_write_ref.htm --> FR:TP_WRITE_ref.htm      
 
 ## Commands
 
@@ -66,73 +66,74 @@ Some commands require several parameters or arguments.
     - needs extra argument: '0'
       - otherwise parser is not executed
 
-```:CALL TP_WRITE('USER','Value of R[1]is %R',1);```
+    :CALL TP_WRITE('USER','Value of R[1]is %R',1);    
 
-```:CALL TP_WRITE('USER','Time now: %TIME',1);```
+    :CALL TP_WRITE('USER','Time now: %TIME',1);    
 
 ---
 ### HELP (11)
-```: CALL TP_WRITE('HELP'); ``` **or**
-```: CALL TP_WRITE(11); ```
+    : CALL TP_WRITE('HELP');
+
+    : CALL TP_WRITE(11);     
 
 **Shows (web)help of this program**
 
 ---
 ### USER (21)
-```: CALL TP_WRITE('USER','Hello User'); ```
+    : CALL TP_WRITE('USER','Hello User');     
 
 **Writes a (dynamic)string to UserScreen**
 
 ---
 ### TPDISPLAY (21)
-```: CALL TP_WRITE('TPDISPLAY','Hello User'); ```
+    : CALL TP_WRITE('TPDISPLAY','Hello User');     
 
 **Writes a (dynamic)string to UserScreen**
 
 ---
 ### TPERROR (22)
-```: CALL TP_WRITE('TPERROR','Hello User'); ```
+    : CALL TP_WRITE('TPERROR','Hello User');     
 
 **Writes a (dynamic)string to TPERROR area**
 
 ---
 ### TPPROMPT (23)
-```: CALL TP_WRITE('TPPROMPT','Hello User'); ```
+    : CALL TP_WRITE('TPPROMPT','Hello User');     
 
 **Writes a (dynamic)string to TPPROMPT area**
 
 
 ---
 ### TPFUNC (24)
-```: CALL TP_WRITE('TPFUNC','Hello User'); ```
+    : CALL TP_WRITE('TPFUNC','Hello User');     
 
 **Writes a (dynamic)string to TPFUNC (function keys area)**
 
 ---
 ### TPSTATUS (25)
-```: CALL TP_WRITE('TPSTATUS','Hello User'); ```
+    : CALL TP_WRITE('TPSTATUS','Hello User');     
 
 **Writes a (dynamic)string to TPSTATUS (only if active)**
 
 ---
 ### SR (26)
-```: CALL TP_WRITE('SR',idx,'Hello User'); ```
+    : CALL TP_WRITE('SR',idx,'Hello User');     
 
- ```:  CALL TP_WRITE("SR"=26,"ID"=1,"Str2Write"='Reg1 = %R',1) ; ```
+     :  CALL TP_WRITE("SR"=26,"ID"=1,"Str2Write"='Reg1 = %R',1) ;     
 
 **Writes a (dynamic)string to SR with given String and index**
 
 ---
 ### CONSOLE (27)
-```: CALL TP_WRITE('CONSOLE','Hello User'); ```
+    : CALL TP_WRITE('CONSOLE','Hello User');     
 
 **Writes a (dynamic)string to CONSOLE**
 
 ---
 ### POST_ERR (28)
-```: CALL TP_WRITE('POST_ERR',SEV,ERRCODE); ```
+    : CALL TP_WRITE('POST_ERR',SEV,ERRCODE);     
 
-```:  CALL TP_WRITE("POST_ERR"=28,"INFO"=0,"Sys-Err_Num"=0) ;```
+    :  CALL TP_WRITE("POST_ERR"=28,"INFO"=0,"Sys-Err_Num"=0) ;    
  - SEV / Severity : 
     - INFO:0 =  Nothing
     -  WARN:1 = PAUSE
@@ -148,9 +149,9 @@ Some commands require several parameters or arguments.
 
 ---
 ### APSH_ERR (29)
-```: CALL TP_WRITE('APSH_ERR',SEV,'Hello User'); ```
+    : CALL TP_WRITE('APSH_ERR',SEV,'Hello User');     
 
-```:  CALL TP_WRITE("APSH_ERR"=29,"INFO"=0,"Str2Write"='...') ;```
+    :  CALL TP_WRITE("APSH_ERR"=29,"INFO"=0,"Str2Write"='...') ;    
 
   - Severity : 
     - INFO:0 =  Nothing
@@ -163,49 +164,49 @@ Some commands require several parameters or arguments.
 
 ---
 ### TPERR_CONS (31)
-```: CALL TP_WRITE('TPERR_CONS','Hello User'); ```
+    : CALL TP_WRITE('TPERR_CONS','Hello User');     
 
 **Writes a (dynamic)string to TPERROR AND Console**
 
 ---
 ### CLEAR commands
-```: CALL TP_WRITE('CLEAR.xxxx'); ```
+    : CALL TP_WRITE('CLEAR.xxxx');     
 
 **Erases all chars from corresponding sreen/area**
 
 ---
 ### CLEAR.TPDISPLAY (61)
-```: CALL TP_WRITE('CLEAR.TPDISPLAY'); ```
+    : CALL TP_WRITE('CLEAR.TPDISPLAY');     
 
 **erases all chars from TPDISPLAY/User screen**
 
 ---
 ### CLEAR.TPERROR (62)
-```: CALL TP_WRITE('CLEAR.TPERROR'); ```
+    : CALL TP_WRITE('CLEAR.TPERROR');     
 
 **erases all chars from error area**
 
 ---
 ### CLEAR.TPPROMPT (63)
-```: CALL TP_WRITE('CLEAR.TPPROMPT'); ```
+    : CALL TP_WRITE('CLEAR.TPPROMPT');     
 
 **erases all chars from prompt area**
 
 ---
 ### CLEAR.TPFUNC (64)
-```: CALL TP_WRITE('CLEAR.TPFUNC'); ```
+    : CALL TP_WRITE('CLEAR.TPFUNC');     
 
 **erases all chars from function key area**
 
 ---
 ### CLEAR.TPSTATUS (65)
-```: CALL TP_WRITE('CLEAR.TPSTATUS'); ```
+    : CALL TP_WRITE('CLEAR.TPSTATUS');     
 
 **erases all chars from status area ; only if status is active**
 
 ---
 ### CLEAR.USER (61)
-```: CALL TP_WRITE('CLEAR.USER'); ```
+    : CALL TP_WRITE('CLEAR.USER');     
 
 **erases all chars from TPDISPLAY/User screen**
 
@@ -219,7 +220,7 @@ Same as **'TP_VIEW'** 'force commands.
 
 ---
 ### FORCE.USER (51)
-```: CALL TP_WRITE('FORCE.USER'); ```
+    : CALL TP_WRITE('FORCE.USER');     
 
 **Forces SingleUserScreen** 
 
@@ -228,7 +229,7 @@ Same as **'TP_VIEW'** 'force commands.
 
 ---
 ### FORCE.USERWIDE (52)
-```: CALL TP_WRITE('FORCE.USERWIDE'); ```
+    : CALL TP_WRITE('FORCE.USERWIDE');     
 
 **Forces SingleUserScreen inside wide mode**
 

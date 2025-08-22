@@ -9,9 +9,9 @@ Use TP_VIEW to switch/change the iPendant windows/screens .
 
 The shrinked version(*tp_view_ref.htm*) of this reference file can be uploaded to the controller. This way, the information is also available on the TP or via web browser.
 
-- ```Teach Pendant  : TP_VIEW('HELP'); ```
-- ```web browser    : _hostname_/karel/tp_view```
-- ```FTP upload     : tpview_ref.htm --> FR:tpview_ref.htm  ```
+-     Teach Pendant  : TP_VIEW('HELP');     
+-     web browser    : _hostname_/karel/tp_view    
+-     FTP upload     : tpview_ref.htm --> FR:tpview_ref.htm      
 
 ## Commands
 
@@ -44,14 +44,14 @@ Some commands require several parameters or arguments.
 
 ---
 ### HELP (11)
-```:TP_VIEW('HELP'); ``` **or**
-```:TP_VIEW(11); ```
+    :TP_VIEW('HELP');      **or**
+    :TP_VIEW(11);     
 
 **Shows (web)help of this program**
 
 ---
 ### RESTORE (12)
-```:TP_VIEW('RESTORE'); ```
+    :TP_VIEW('RESTORE');     
 
 **Restores "$UI_RESTORE[1]-sysvar"**
 
@@ -59,7 +59,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### LOAD_VIEW (13)
-```:TP_VIEW('LOAD_VIEW',[idx]); ```
+    :TP_VIEW('LOAD_VIEW',[idx]);     
 
 **favorite view functions are not available on R50iA** 
 
@@ -82,7 +82,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### CLEAR_VIEW (14)
-```:TP_VIEW('CLEAR_VIEW',[idx]); ```
+    :TP_VIEW('CLEAR_VIEW',[idx]);     
 
 **Clears the user view with given index**
 
@@ -92,7 +92,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### SINGLE_USER (15)
-```:TP_VIEW('SINGLE_USER'); ```
+    :TP_VIEW('SINGLE_USER');     
 
 **Forces SingleUserScreen** 
 
@@ -102,7 +102,7 @@ Some commands require several parameters or arguments.
 
 ---
 ### WIDE_USER (16)
-```:TP_VIEW('WIDE_USER'); ```
+    :TP_VIEW('WIDE_USER');     
 
 **Forces SingleUserScreen inside wide mode**
 
@@ -116,37 +116,37 @@ Some commands require several parameters or arguments.
 
 ---
 ### SCREEN.SINGLE (31)
-```:TP_VIEW('SCREEN.SINGLE'); ```
+    :TP_VIEW('SCREEN.SINGLE');     
 
 **default window inside SingleScreen**
 
 ---
 ### SCREEN.WIDE (32)
-```:TP_VIEW('SCREEN.WIDE'); ```
+    :TP_VIEW('SCREEN.WIDE');     
 
 **default window inside SingleScreen WIDE**
 
 ---
 ### SCREEN.DOUBLE (33)
-```:TP_VIEW('SCREEN.DOUBLE'); ```
+    :TP_VIEW('SCREEN.DOUBLE');     
 
 **default window(s) inside DOUBLEScreen**
 
 ---
 ### SCREEN.TRIPLE (34)
-```:TP_VIEW('SCREEN.TRIPLE'); ```
+    :TP_VIEW('SCREEN.TRIPLE');     
 
 **default window(s) inside TRIPLEScreen**
 
 ---
 ### SCREEN.TREEPRIM (35)
-```:TP_VIEW('SCREEN.TREEPRIM'); ```
+    :TP_VIEW('SCREEN.TREEPRIM');     
 
 **default window(s) inside TreeView and PrimaryScreen**
 
 ---
 ### SCREEN.STATPRIM (36)
-```:TP_VIEW('SCREEN.STATPRIM'); ```
+    :TP_VIEW('SCREEN.STATPRIM');     
 
 **default window(s) inside StatusScreen and PrimaryScreen**
 
@@ -161,7 +161,7 @@ Check Fanuc iPendant customization doc for XML definition.
 
 ---
 ### DIALOG.FROMFILE (41)
-```:TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml'); ```
+    :TP_VIEW('DIALOG.FROMFILE','FR:dlg_Flags_OK.xml');     
 
 
 Shows a modal dialog. The XML dialog is loaded from file path.
@@ -189,7 +189,7 @@ XML-File uses Flag[1] - Flag[8]
 - Others are 'based' on FORCE_LINK.
 ---
 ### FORCE.USER (51)
-```:TP_VIEW('FORCE.USER'); ```
+    :TP_VIEW('FORCE.USER');     
 
 **Forces SingleUserScreen** 
 
@@ -198,7 +198,7 @@ XML-File uses Flag[1] - Flag[8]
 
 ---
 ### FORCE.USERWIDE (52)
-```:TP_VIEW('FORCE.USERWIDE'); ```
+    :TP_VIEW('FORCE.USERWIDE');     
 
 **Forces SingleUserScreen inside wide mode**
 
@@ -207,7 +207,7 @@ XML-File uses Flag[1] - Flag[8]
 
 ---
 ### FORCE.VIEW (53)
-```:TP_VIEW('FORCE.VIEW',[idx]); ```
+    :TP_VIEW('FORCE.VIEW',[idx]);     
 
 **Forces the user view by given index**
 
@@ -221,7 +221,7 @@ To clear a *user favorite view* use **CLEAR_VIEW-command**
 
 ---
 ### FORCE.LINK (59)
-```:TP_VIEW('FORCE.LINK','URL',[string2]..); ```
+    :TP_VIEW('FORCE.LINK','URL',[string2]..);     
 
 **Forces a valid link by a string (array)**
   - one or more string arguments are concated to together

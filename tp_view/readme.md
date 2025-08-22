@@ -1,4 +1,3 @@
-**source file of TP_VIEW_Info.html**
 # TP_VIEW README
 
 
@@ -32,18 +31,25 @@ e.g.
 
 ## Command Reference
 
-[TP View Command Reference](./tp_view_ref.md)
+***tp_view_ref***.md or ***tp_view_ref***.htm
+
 Explains all commands and fuctions of this Software.
 
 **Info:** Upload "tp_view_ref.htm" to the controller to get help at your fingertips.
 
+---
 
 
-This Animation shows how to create a user favorite view. Afterwards this view is restored.
+**Example favorite view:** Afterwards this view is restored.
 ![user defined view](./assets/TP_VIEW_Example1.gif)
+
+
 
 **favorite view functions are not available on R50iA** 
 
+---
 
 **THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND**
+
+---
 
