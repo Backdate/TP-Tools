@@ -9,22 +9,16 @@ Simple programs with one dedicated function.
 - [Position Register](#position-register)
 - [String Register](#string-register)
 - [Local Register](#local-register)
+- [Program Position](#program-position)
 - [License](#license)
 
 </details>
 
-##
-<tab><tab>code/text herec asfwe
-
-
-
-
 ## Numeric Register:
 
 - **sin2REG** : sine to Register
-```TP
+
       : CALL SIN2REG(33.5,1) ;
-```
 
 - **cos2REG** : cosine to Register
 
@@ -59,7 +53,7 @@ Simple programs with one dedicated function.
         
     - will set 66 to **R[1]**, since second char of string is 'B'
 
-## Position-Register:
+## Position Register:
 
 - **conf2pr** : writes config data of given string to Posreg
 
@@ -76,18 +70,30 @@ Simple programs with one dedicated function.
   - set comment 'MyComment' @**PR[1]**
   - no local register support
 
+- **progpos2pr** : stores position data of given TP program position (progname; idx) to *posreg*(idx)  specified 
+
+      :  CALL PR2PROGPOS(1,'test_prog',2) ;
+
+   - will abort on error
+   - Group 1 (GP1) only
+   - given *prog pos representation* is used to set target  posreg representation
+   - no local reg support (yet)
+   - see also **PR2PROGPOS**
+
+### **future releases:**
+
 - ~~**inv2pr**~~ : inverse of PR to other PR
 
-      : CALL inv2pr(1,4) ;
+            : CALL inv2pr(1,4) ;
 
   - set **inverse** of PR[1] @**PR[4]**
 
 - ~~**rel2pr**~~ : calc 2 PRs with **':'**  to other PR
 
-      : CALL rel2pr(1,2,3) ;
+            : CALL rel2pr(1,2,3) ;
 
   -  uses **':'** ; relative position operator
-     - **PR[3]** = **PR[1]** : **PR[2]**
+  - **PR[3]** = **PR[1]** : **PR[2]**
   -  ~~*alias* progname : ***rpo2pr***~~
 
 ## String Register
@@ -109,6 +115,19 @@ Simple programs with one dedicated function.
     :  IF R[10001].....                ; 
 
 
+## Program Position
+
+- **pr2progpos** : stores position data of given *posreg*(idx) to specified TP program position (progname; idx)
+
+      : CALL PR2PROGPOS(1,'test_prog',2) ;
+
+    - will abort on error
+    - Group 1 (GP1) only
+    - given *posreg representation* is used to set target pos representation
+    - no local reg support (yet)
+    - see also **PROGPOS2PR**
+ 
+
 ---
 ---
 
@@ -123,7 +142,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND
 
 ---
 ---
-<h2 id="about">About Us</h2>
 
 ***Fanuc*** is a registered trademark
 

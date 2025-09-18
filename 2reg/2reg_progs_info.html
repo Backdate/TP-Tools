@@ -431,18 +431,16 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li><a href="#position-register">Position Register</a></li>
 <li><a href="#string-register">String Register</a></li>
 <li><a href="#local-register">Local Register</a></li>
+<li><a href="#program-position">Program Position</a></li>
 <li><a href="#license">License</a></li>
 </ul>
 </details>
-<h2 id="section"></h2>
-<p><tab><tab>code/text herec asfwe</tab></tab></p>
 <h2 id="numeric-register">Numeric Register:</h2>
 <ul>
-<li><strong>sin2REG</strong> : sine to Register</li>
-</ul>
-<pre><code class="language-TP">      : CALL SIN2REG(33.5,1) ;
+<li><p><strong>sin2REG</strong> : sine to Register</p>
+<pre><code>: CALL SIN2REG(33.5,1) ;
 </code></pre>
-<ul>
+</li>
 <li><p><strong>cos2REG</strong> : cosine to Register</p>
 <pre><code>: CALL COS2REG(33.5,2) ;
 </code></pre>
@@ -483,7 +481,7 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 </ul>
 </li>
 </ul>
-<h2 id="position-register">Position-Register:</h2>
+<h2 id="position-register">Position Register:</h2>
 <ul>
 <li><p><strong>conf2pr</strong> : writes config data of given string to Posreg</p>
 <pre><code>: CALL conf2pr('N , U , T , 0 , 0 , 1',1) ;
@@ -501,22 +499,33 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>no local register support</li>
 </ul>
 </li>
+<li><p><strong>progpos2pr</strong> : stores position data of given TP program position (progname; idx) to <em>posreg</em>(idx)  specified</p>
+<pre><code>:  CALL PR2PROGPOS(1,'test_prog',2) ;
+</code></pre>
+<ul>
+<li>will abort on error</li>
+<li>Group 1 (GP1) only</li>
+<li>given <em>prog pos representation</em> is used to set target  posreg representation</li>
+<li>no local reg support (yet)</li>
+<li>see also <strong>PR2PROGPOS</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="future-releases"><strong>future releases:</strong></h3>
+<ul>
 <li><p><del><strong>inv2pr</strong></del> : inverse of PR to other PR</p>
-<pre><code>: CALL inv2pr(1,4) ;
+<pre><code>      : CALL inv2pr(1,4) ;
 </code></pre>
 <ul>
 <li>set <strong>inverse</strong> of PR[1] @<strong>PR[4]</strong></li>
 </ul>
 </li>
 <li><p><del><strong>rel2pr</strong></del> : calc 2 PRs with <strong>':'</strong>  to other PR</p>
-<pre><code>: CALL rel2pr(1,2,3) ;
+<pre><code>      : CALL rel2pr(1,2,3) ;
 </code></pre>
 <ul>
-<li>uses <strong>':'</strong> ; relative position operator
-<ul>
+<li>uses <strong>':'</strong> ; relative position operator</li>
 <li><strong>PR[3]</strong> = <strong>PR[1]</strong> : <strong>PR[2]</strong></li>
-</ul>
-</li>
 <li><del><em>alias</em> progname : <em><strong>rpo2pr</strong></em></del></li>
 </ul>
 </li>
@@ -538,6 +547,20 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <pre><code>:  CALL ord2reg('ABCDE123,2,10001) ;
 :  IF R[10001].....                ; 
 </code></pre>
+<h2 id="program-position">Program Position</h2>
+<ul>
+<li><p><strong>pr2progpos</strong> : stores position data of given <em>posreg</em>(idx) to specified TP program position (progname; idx)</p>
+<pre><code>: CALL PR2PROGPOS(1,'test_prog',2) ;
+</code></pre>
+<ul>
+<li>will abort on error</li>
+<li>Group 1 (GP1) only</li>
+<li>given <em>posreg representation</em> is used to set target pos representation</li>
+<li>no local reg support (yet)</li>
+<li>see also <strong>PROGPOS2PR</strong></li>
+</ul>
+</li>
+</ul>
 <hr>
 <hr>
 <h2 id="license">License</h2>
@@ -547,7 +570,6 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND</p>
 <hr>
 <hr>
-<h2 id="about">About Us</h2>
 <p><em><strong>Fanuc</strong></em> is a registered trademark</p>
 <hr>
 <p>(c) 2025 Backdate Software GmbH /Andreas Wissing</p>
