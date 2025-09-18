@@ -72,7 +72,7 @@ Simple programs with one dedicated function.
 
 - **progpos2pr** : stores position data of given TP program position (progname; idx) to *posreg*(idx)  specified 
 
-      :  CALL PR2PROGPOS(1,'test_prog',2) ;
+      :  CALL PROGPOS2PR('test_prog',2,3) ;
 
    - will abort on error
    - Group 1 (GP1) only
