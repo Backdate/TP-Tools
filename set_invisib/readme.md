@@ -1,4 +1,3 @@
-**source file of set_invisib_Info.html**
 # set_invisib  README
 
 Set a program or va file visible or invisible.

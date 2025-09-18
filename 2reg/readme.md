@@ -1,13 +1,30 @@
 # 2REG PROGS
 Simple programs with one dedicated function.
 
-<a href="markdownmonster:untitled.urlencoded,Hello+World">Open in Markdown Monster</a>
+
+<details>
+  <summary><b>TOC</b></summary>
+
+- [Numeric Register](#numeric-register)
+- [Position Register](#position-register)
+- [String Register](#string-register)
+- [Local Register](#local-register)
+- [License](#license)
+
+</details>
+
+##
+<tab><tab>code/text herec asfwe
+
+
+
 
 ## Numeric Register:
 
 - **sin2REG** : sine to Register
-
+```TP
       : CALL SIN2REG(33.5,1) ;
+```
 
 - **cos2REG** : cosine to Register
 
@@ -42,20 +59,22 @@ Simple programs with one dedicated function.
         
     - will set 66 to **R[1]**, since second char of string is 'B'
 
-## Position Register:
+## Position-Register:
 
 - **conf2pr** : writes config data of given string to Posreg
 
-      : CALL conf2pr('N , U , T , 0 0 1',1) ;
+      : CALL conf2pr('N , U , T , 0 , 0 , 1',1) ;
 
     - set CONFIG 'NUT001' @**PR[1]**
+    - check also *conf2sr*
 
     
-- ~~**cmt2pr**~~ : writes comment of given string to Posreg
+- **cmt2pr** : writes comment of given string to Posreg
 
       : CALL cmt2pr('MyComment',1) ;
 
   - set comment 'MyComment' @**PR[1]**
+  - no local register support
 
 - ~~**inv2pr**~~ : inverse of PR to other PR
 
@@ -73,11 +92,12 @@ Simple programs with one dedicated function.
 
 ## String Register
 
-- **conf2sr** : set config dat of given Posreg to Stringreg (as string)
+- **conf2sr** : set config data of given Posreg to Stringreg (as string)
 
       : CALL conf2sr(1,3) ;
 
     - set conf of **PR[1]** @**SR[3]**
+    - check also *conf2pr*
 
 ## Local Register
 
@@ -91,7 +111,8 @@ Simple programs with one dedicated function.
 
 ---
 ---
-### License
+
+## License
 
 **FREE commercial use | CC BY-ND 4.0**
 
@@ -102,8 +123,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND
 
 ---
 ---
-
+<h2 id="about">About Us</h2>
 
 ***Fanuc*** is a registered trademark
+
 ---
   (c) 2025 Backdate Software GmbH /Andreas Wissing
