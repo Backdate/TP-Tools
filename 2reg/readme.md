@@ -80,22 +80,28 @@ Simple programs with one dedicated function.
    - no local reg support (yet)
    - see also **PR2PROGPOS**
 
-### **future releases:**
 
-- ~~**inv2pr**~~ : inverse of PR to other PR
+- **inv2pr** : inverse of PR to other PR
 
             : CALL inv2pr(1,4) ;
 
   - set **inverse** of PR[1] @**PR[4]**
+  - no local reg support (yet)
 
-- ~~**rel2pr**~~ : calc 2 PRs with **':'**  to other PR
+- **rel2pr** : calc 2 PRs with **':'**  to other PR
 
             : CALL rel2pr(1,2,3) ;
 
   -  uses **':'** ; relative position operator
   - **PR[3]** = **PR[1]** : **PR[2]**
+  - no local reg support (yet)
   -  ~~*alias* progname : ***rpo2pr***~~
 
+### **future releases:**
+-  local reg support for
+      - PROGPOS2PR
+      - INV2PR
+      - REL2PR
 ## String Register
 
 - **conf2sr** : set config data of given Posreg to Stringreg (as string)

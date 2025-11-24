@@ -510,23 +510,32 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>see also <strong>PR2PROGPOS</strong></li>
 </ul>
 </li>
-</ul>
-<h3 id="future-releases"><strong>future releases:</strong></h3>
-<ul>
-<li><p><del><strong>inv2pr</strong></del> : inverse of PR to other PR</p>
+<li><p><strong>inv2pr</strong> : inverse of PR to other PR</p>
 <pre><code>      : CALL inv2pr(1,4) ;
 </code></pre>
 <ul>
 <li>set <strong>inverse</strong> of PR[1] @<strong>PR[4]</strong></li>
+<li>no local reg support (yet)</li>
 </ul>
 </li>
-<li><p><del><strong>rel2pr</strong></del> : calc 2 PRs with <strong>':'</strong>  to other PR</p>
+<li><p><strong>rel2pr</strong> : calc 2 PRs with <strong>':'</strong>  to other PR</p>
 <pre><code>      : CALL rel2pr(1,2,3) ;
 </code></pre>
 <ul>
 <li>uses <strong>':'</strong> ; relative position operator</li>
 <li><strong>PR[3]</strong> = <strong>PR[1]</strong> : <strong>PR[2]</strong></li>
+<li>no local reg support (yet)</li>
 <li><del><em>alias</em> progname : <em><strong>rpo2pr</strong></em></del></li>
+</ul>
+</li>
+</ul>
+<h3 id="future-releases"><strong>future releases:</strong></h3>
+<ul>
+<li>local reg support for
+<ul>
+<li>PROGPOS2PR</li>
+<li>INV2PR</li>
+<li>REL2PR</li>
 </ul>
 </li>
 </ul>
