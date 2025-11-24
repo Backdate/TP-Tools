@@ -1,13 +1,8 @@
 
 # Changelog
 ## Changes
-- *2025/08/22* : update docs, fix typos
-- *2025/08/21* : update docs, add conf2pr
-- *2025/04/25* : update docs, progs and bugfix apsh-err
-- *2025/04/24* : add: R-50iA target (V10.10)
-- *2024/10/10* : add: tp_write TPERR_CONSOLE command
-- *2024/10/10* : solved: tp_write trim problem 
-- *2024/08/21* : tp_write V810/V910 compiling/linking problems
+- *2025/11/24* : addrel2pr,inv2pr ;update docs
+- ...
 - *2024/07/31* : typo and v-info
 - *2024/01/04* : changed internal tool chain ; update friex-browser (bug)
 - *2023/10/18* : **TP-Tools 1.1.48 release: translations and local Register support ; binary assets**
