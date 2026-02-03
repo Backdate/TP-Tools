@@ -505,8 +505,7 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <ul>
 <li>will abort on error</li>
 <li>Group 1 (GP1) only</li>
-<li>given <em>prog pos representation</em> is used to set target  posreg representation</li>
-<li>no local reg support (yet)</li>
+<li>given <em>prog pos representation</em> is used to set target posreg representation</li>
 <li>see also <strong>PR2PROGPOS</strong></li>
 </ul>
 </li>
@@ -515,7 +514,6 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 </code></pre>
 <ul>
 <li>set <strong>inverse</strong> of PR[1] @<strong>PR[4]</strong></li>
-<li>no local reg support (yet)</li>
 </ul>
 </li>
 <li><p><strong>rel2pr</strong> : calc 2 PRs with <strong>':'</strong>  to other PR</p>
@@ -524,18 +522,6 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <ul>
 <li>uses <strong>':'</strong> ; relative position operator</li>
 <li><strong>PR[3]</strong> = <strong>PR[1]</strong> : <strong>PR[2]</strong></li>
-<li>no local reg support (yet)</li>
-<li><del><em>alias</em> progname : <em><strong>rpo2pr</strong></em></del></li>
-</ul>
-</li>
-</ul>
-<h3 id="future-releases"><strong>future releases:</strong></h3>
-<ul>
-<li>local reg support for
-<ul>
-<li>PROGPOS2PR</li>
-<li>INV2PR</li>
-<li>REL2PR</li>
 </ul>
 </li>
 </ul>
@@ -550,12 +536,6 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 </ul>
 </li>
 </ul>
-<h2 id="local-register">Local Register</h2>
-<p><em>R30iBPlus V940 / R-50iA V1010</em> progs support writing to <strong>local Register</strong> of calling TP prog.</p>
-<p><em><strong>Infos</strong></em> Local Register setup in <strong>detail</strong> screen of selected tp prog*</p>
-<pre><code>:  CALL ord2reg('ABCDE123,2,10001) ;
-:  IF R[10001].....                ; 
-</code></pre>
 <h2 id="program-position">Program Position</h2>
 <ul>
 <li><p><strong>pr2progpos</strong> : stores position data of given <em>posreg</em>(idx) to specified TP program position (progname; idx)</p>
@@ -565,11 +545,16 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>will abort on error</li>
 <li>Group 1 (GP1) only</li>
 <li>given <em>posreg representation</em> is used to set target pos representation</li>
-<li>no local reg support (yet)</li>
 <li>see also <strong>PROGPOS2PR</strong></li>
 </ul>
 </li>
 </ul>
+<h2 id="local-register">Local Register</h2>
+<p><em>R30iBPlus V940 / R-50iA V1010</em> progs support writing to <strong>local Register</strong> of calling TP prog.</p>
+<p><em><strong>Infos</strong></em> Local Register setup in <strong>detail</strong> screen of selected tp prog*</p>
+<pre><code>:  CALL ord2reg('ABCDE123,2,10001) ;
+:  IF R[10001].....                ; 
+</code></pre>
 <hr>
 <hr>
 <h2 id="license">License</h2>

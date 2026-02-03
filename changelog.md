@@ -1,7 +1,8 @@
 
 # Changelog
 ## Changes
-- *2025/11/24* : addrel2pr,inv2pr ;update docs
+- *2026/02/03* : add local reg support:rel2pr,inv2pr,progpos2pr,pr2progpos ; update docs
+- *2025/11/24* : add rel2pr,inv2pr ;update docs
 - ...
 - *2024/07/31* : typo and v-info
 - *2024/01/04* : changed internal tool chain ; update friex-browser (bug)

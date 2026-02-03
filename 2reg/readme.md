@@ -76,8 +76,7 @@ Simple programs with one dedicated function.
 
    - will abort on error
    - Group 1 (GP1) only
-   - given *prog pos representation* is used to set target  posreg representation
-   - no local reg support (yet)
+   - given *prog pos representation* is used to set target posreg representation
    - see also **PR2PROGPOS**
 
 
@@ -86,7 +85,6 @@ Simple programs with one dedicated function.
             : CALL inv2pr(1,4) ;
 
   - set **inverse** of PR[1] @**PR[4]**
-  - no local reg support (yet)
 
 - **rel2pr** : calc 2 PRs with **':'**  to other PR
 
@@ -94,14 +92,7 @@ Simple programs with one dedicated function.
 
   -  uses **':'** ; relative position operator
   - **PR[3]** = **PR[1]** : **PR[2]**
-  - no local reg support (yet)
-  -  ~~*alias* progname : ***rpo2pr***~~
 
-### **future releases:**
--  local reg support for
-      - PROGPOS2PR
-      - INV2PR
-      - REL2PR
 ## String Register
 
 - **conf2sr** : set config data of given Posreg to Stringreg (as string)
@@ -110,15 +101,6 @@ Simple programs with one dedicated function.
 
     - set conf of **PR[1]** @**SR[3]**
     - check also *conf2pr*
-
-## Local Register
-
-*R30iBPlus V940 / R-50iA V1010* progs support writing to **local Register** of calling TP prog.
-
-***Infos*** Local Register setup in **detail** screen of selected tp prog*
-
-    :  CALL ord2reg('ABCDE123,2,10001) ;
-    :  IF R[10001].....                ; 
 
 
 ## Program Position
@@ -130,9 +112,16 @@ Simple programs with one dedicated function.
     - will abort on error
     - Group 1 (GP1) only
     - given *posreg representation* is used to set target pos representation
-    - no local reg support (yet)
     - see also **PROGPOS2PR**
  
+## Local Register
+
+*R30iBPlus V940 / R-50iA V1010* progs support writing to **local Register** of calling TP prog.
+
+***Infos*** Local Register setup in **detail** screen of selected tp prog*
+
+    :  CALL ord2reg('ABCDE123,2,10001) ;
+    :  IF R[10001].....                ; 
 
 ---
 ---
