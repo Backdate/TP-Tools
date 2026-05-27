@@ -126,7 +126,9 @@ Simple programs with one dedicated function.
 ## Reference Position
 
 - **pr2rp** : stores position data of given *posreg*(idx) to specified reference position ( idx)
+
    : CALL PR2RP(1,2) ;
+
  - will abort on error
  - Group 1 (GP1) only
  - given *posreg data* is converted to radians(automatically)
