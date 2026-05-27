@@ -79,6 +79,15 @@ Simple programs with one dedicated function.
    - given *prog pos representation* is used to set target posreg representation
    - see also **PR2PROGPOS**
 
+- **rp2pr** : stores reference position data of given index to *posreg*(idx)  specified 
+
+      :  CALL RP2PR(,2,3) ;
+
+   - will abort on error
+   - Group 1 (GP1) only
+   - given *ref pos sysvar data* is converted to degrees(automatically)
+   - see also **PR2RP**
+
 
 - **inv2pr** : inverse of PR to other PR
 
@@ -113,7 +122,16 @@ Simple programs with one dedicated function.
     - Group 1 (GP1) only
     - given *posreg representation* is used to set target pos representation
     - see also **PROGPOS2PR**
- 
+
+## Reference Position
+
+- **pr2rp** : stores position data of given *posreg*(idx) to specified reference position ( idx)
+   : CALL PR2RP(1,2) ;
+ - will abort on error
+ - Group 1 (GP1) only
+ - given *posreg data* is converted to radians(automatically)
+ - see also **rp2pr**
+
 ## Local Register
 
 *R30iBPlus V940 / R-50iA V1010* progs support writing to **local Register** of calling TP prog.

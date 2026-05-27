@@ -509,6 +509,16 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>see also <strong>PR2PROGPOS</strong></li>
 </ul>
 </li>
+<li><p><strong>rp2pr</strong> : stores reference position data of given index to <em>posreg</em>(idx)  specified</p>
+<pre><code>:  CALL RP2PR(,2,3) ;
+</code></pre>
+<ul>
+<li>will abort on error</li>
+<li>Group 1 (GP1) only</li>
+<li>given <em>ref pos sysvar data</em> is converted to degrees(automatically)</li>
+<li>see also <strong>PR2RP</strong></li>
+</ul>
+</li>
 <li><p><strong>inv2pr</strong> : inverse of PR to other PR</p>
 <pre><code>      : CALL inv2pr(1,4) ;
 </code></pre>
@@ -548,6 +558,15 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>see also <strong>PROGPOS2PR</strong></li>
 </ul>
 </li>
+</ul>
+<h2 id="reference-position">Reference Position</h2>
+<ul>
+<li><strong>pr2rp</strong> : stores position data of given <em>posreg</em>(idx) to specified reference position ( idx)
+: CALL PR2RP(1,2) ;</li>
+<li>will abort on error</li>
+<li>Group 1 (GP1) only</li>
+<li>given <em>posreg data</em> is converted to radians(automatically)</li>
+<li>see also <strong>rp2pr</strong></li>
 </ul>
 <h2 id="local-register">Local Register</h2>
 <p><em>R30iBPlus V940 / R-50iA V1010</em> progs support writing to <strong>local Register</strong> of calling TP prog.</p>
