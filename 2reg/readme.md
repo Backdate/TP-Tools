@@ -53,6 +53,13 @@ Simple programs with one dedicated function.
         
     - will set 66 to **R[1]**, since second char of string is 'B'
 
+- **cmt2reg** : writes comment of given string to Register
+
+      : CALL cmt2reg('MyComment',1) ;
+
+  - set comment 'MyComment' @**R[1]**
+  - no local register support
+
 ## Position Register:
 
 - **conf2pr** : writes config data of given string to Posreg
@@ -111,6 +118,13 @@ Simple programs with one dedicated function.
     - set conf of **PR[1]** @**SR[3]**
     - check also *conf2pr*
 
+- **cmt2sr** : writes comment of given string to string register
+
+      : CALL cmt2sr('MyComment',1) ;
+
+  - set comment 'MyComment' @**SR[1]**
+  - no local register support
+
 
 ## Program Position
 
@@ -133,6 +147,20 @@ Simple programs with one dedicated function.
  - Group 1 (GP1) only
  - given *posreg data* is converted to radians(automatically)
  - see also **rp2pr**
+
+
+- **cmt2rp** : writes comment of given string to RefPos
+
+      : CALL cmt2rp('MyComment',1) ;
+
+  - set comment 'MyComment' @**RefPos[1]**
+  - no local register support
+
+## Comments of "Global Types"
+
+Check programs like "**CMT2PR**" or "**CMT2SR**"
+
+
 
 ## Local Register
 

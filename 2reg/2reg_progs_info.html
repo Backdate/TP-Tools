@@ -480,6 +480,14 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>will set 66 to <strong>R[1]</strong>, since second char of string is 'B'</li>
 </ul>
 </li>
+<li><p><strong>cmt2reg</strong> : writes comment of given string to Register</p>
+<pre><code>: CALL cmt2reg('MyComment',1) ;
+</code></pre>
+<ul>
+<li>set comment 'MyComment' @<strong>R[1]</strong></li>
+<li>no local register support</li>
+</ul>
+</li>
 </ul>
 <h2 id="position-register">Position Register:</h2>
 <ul>
@@ -545,6 +553,14 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 <li>check also <em>conf2pr</em></li>
 </ul>
 </li>
+<li><p><strong>cmt2sr</strong> : writes comment of given string to string register</p>
+<pre><code>: CALL cmt2sr('MyComment',1) ;
+</code></pre>
+<ul>
+<li>set comment 'MyComment' @<strong>SR[1]</strong></li>
+<li>no local register support</li>
+</ul>
+</li>
 </ul>
 <h2 id="program-position">Program Position</h2>
 <ul>
@@ -572,7 +588,17 @@ body {        font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system,
 </li>
 <li><p>see also <strong>rp2pr</strong></p>
 </li>
+<li><p><strong>cmt2rp</strong> : writes comment of given string to RefPos</p>
+<pre><code>: CALL cmt2rp('MyComment',1) ;
+</code></pre>
+<ul>
+<li>set comment 'MyComment' @<strong>RefPos[1]</strong></li>
+<li>no local register support</li>
 </ul>
+</li>
+</ul>
+<h2 id="comments-of-global-types">Comments of &quot;Global Types&quot;</h2>
+<p>Check programs like &quot;<strong>CMT2PR</strong>&quot; or &quot;<strong>CMT2SR</strong>&quot;</p>
 <h2 id="local-register">Local Register</h2>
 <p><em>R30iBPlus V940 / R-50iA V1010</em> progs support writing to <strong>local Register</strong> of calling TP prog.</p>
 <p><em><strong>Infos</strong></em> Local Register setup in <strong>detail</strong> screen of selected tp prog*</p>
