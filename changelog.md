@@ -1,6 +1,8 @@
 
 # Changelog
 ## Changes
+- *2026/05/29* : replace wrong cmt2pr
+- *2026/05/28* : add rp2pr and pr2rp; update docs
 - *2026/02/03* : add local reg support:rel2pr,inv2pr,progpos2pr,pr2progpos ; update docs
 - *2025/11/24* : add rel2pr,inv2pr ;update docs
 - ...
